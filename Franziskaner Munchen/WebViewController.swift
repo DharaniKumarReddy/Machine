@@ -8,12 +8,28 @@
 
 import UIKit
 
-class WebViewController: UIViewController {
+class WebViewController: UIViewController, UIWebViewDelegate {
 
+    // MARK:- IBOutlets
+    @IBOutlet private weak var loadingIndicator: UIActivityIndicatorView!
+    @IBOutlet private weak var webView: UIWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        loadingIndicator.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+        loadingIndicator.startAnimating()
+        loadWebView()
+    }
+    
+    private func loadWebView() {
+        if let url = URL(string: "http://franciscansmunich.com/") {
+            let urlRequest = URLRequest(url: url)
+            webView.loadRequest(urlRequest)
+        }
     }
 
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        loadingIndicator.stopAnimating()
+    }
 }

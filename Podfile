@@ -7,6 +7,7 @@ def list_of_library
     use_frameworks!
     # more pods...
     pod 'SlideMenuControllerSwift', :git => 'https://github.com/dekatotoro/SlideMenuControllerSwift', :branch => 'swift4'
+    pod 'SwiftyJSON'
     # even more pods...
 end
 

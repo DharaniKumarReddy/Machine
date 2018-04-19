@@ -10,8 +10,13 @@ import UIKit
 import SlideMenuControllerSwift
 
 let screenWidth = UIScreen.main.bounds.width
+let screenHeight = UIScreen.main.bounds.height
 
 class DashboardViewController: UIViewController {
+    
+    // MARK:- Variables
+    private var currentIndex = 0
+    private var tabs: [UIViewController] = []
     
     // MARK:- IBOutlets
     @IBOutlet private weak var containerView: UIView!
@@ -22,6 +27,8 @@ class DashboardViewController: UIViewController {
         super.viewDidLoad()
 
         navigationController?.isNavigationBarHidden = true
+        navigationController?.navigationBar.tintColor = .white
+        tabs = [loadHome(), loadNews(), loadNotifications(), loadWeb()]
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -42,6 +49,7 @@ class DashboardViewController: UIViewController {
     // MARK:- IBActions
     @IBAction func tabBarButtons_Tapped(button: UIButton) {
         animateIndicator(position: CGFloat(button.tag) * button.frame.size.width)
+        loadTabs(index: button.tag)
     }
     
     @IBAction func swipeGestureRecognizer(swipeGesture: UISwipeGestureRecognizer) {
@@ -51,6 +59,7 @@ class DashboardViewController: UIViewController {
         }
         let position = direction == .left ? indicatorLeadingConstraint.constant + screenWidth/4 : indicatorLeadingConstraint.constant - screenWidth/4
         animateIndicator(position: position)
+        loadTabs(index: Int(roundf(Float(position/(screenWidth/4)))))
     }
     
     // MARK:- Private Methods
@@ -61,19 +70,35 @@ class DashboardViewController: UIViewController {
         })
     }
     
-    private func loadHome() {
-        
+    private func loadTabs(index: Int) {
+        guard index != currentIndex else {
+            return
+        }
+        loadContainer(controller: tabs[index])
+        currentIndex = index
     }
     
-    private func loadNews() {
-        
+    private func loadHome() -> UIViewController {
+        return UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: Constant.ViewControllerWithIdentifier.HomeViewController)
     }
     
-    private func loadNotifications() {
-        
+    private func loadNews() -> UIViewController {
+        return UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: Constant.ViewControllerWithIdentifier.NewsViewController)
     }
     
-    private func loadWeb() {
-        
+    private func loadNotifications() -> UIViewController {
+        return UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: Constant.ViewControllerWithIdentifier.NotificationsViewController)
+    }
+    
+    private func loadWeb() -> UIViewController {
+        return UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: Constant.ViewControllerWithIdentifier.WebViewController)
+    }
+    
+    private func loadContainer(controller: UIViewController) {
+        addChildViewController(controller)
+        view.addSubview(controller.view)
+        controller.view.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight-60)
+        controller.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        controller.didMove(toParentViewController: self)
     }
 }

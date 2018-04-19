@@ -1,8 +1,14 @@
 PODS:
   - SlideMenuControllerSwift (3.0.2)
+  - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
   - SlideMenuControllerSwift (from `https://github.com/dekatotoro/SlideMenuControllerSwift`, branch `swift4`)
+  - SwiftyJSON
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - SwiftyJSON
 
 EXTERNAL SOURCES:
   SlideMenuControllerSwift:
@@ -16,7 +22,8 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   SlideMenuControllerSwift: 9e8d2bba8ea9201c6207acb76e95a2841453ec9c
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: db59b9ae973a059fbd8e4172b1cf732235c0da7d
+PODFILE CHECKSUM: e29c285c734369198b5f92cae527f7d284e379bf
 
 COCOAPODS: 1.5.0

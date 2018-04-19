@@ -38,15 +38,14 @@ class MenuViewController: UIViewController {
             return
         }
         isAnimating = true
-        UIView.animate(withDuration: 35, animations: {
-            self.landscapeImageLeadingConstraint.constant = -742+screenWidth-screenWidth/5
+        UIView.animate(withDuration: 50, animations: {
+            self.landscapeImageLeadingConstraint.constant = -623+screenWidth-screenWidth/5
             self.view.layoutIfNeeded()
         }, completion: { _ in
-            print("completed")
-            guard self.landscapeImageLeadingConstraint.constant == -742+screenWidth-screenWidth/5 else {
+            guard self.landscapeImageLeadingConstraint.constant == -623+screenWidth-screenWidth/5 else {
                 self.isAnimating = false
                 return }
-            UIView.animate(withDuration: 35, animations: {
+            UIView.animate(withDuration: 50, animations: {
                 self.landscapeImageLeadingConstraint.constant = 0
                 self.view.layoutIfNeeded()
             }, completion: { _ in
