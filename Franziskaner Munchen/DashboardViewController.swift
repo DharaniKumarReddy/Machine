@@ -9,8 +9,10 @@
 import UIKit
 import SlideMenuControllerSwift
 
-let screenWidth = UIScreen.main.bounds.width
-let screenHeight = UIScreen.main.bounds.height
+let screenWidth     = UIScreen.main.bounds.width
+let screenHeight    = UIScreen.main.bounds.height
+//let iPhoneX         = screenHeight == 812.0
+let iPhonePlus      = screenHeight == 736.0
 
 class DashboardViewController: UIViewController {
     

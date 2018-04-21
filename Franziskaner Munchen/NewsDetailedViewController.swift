@@ -49,7 +49,7 @@ class NewsDetailedTableCell: UITableViewCell {
     @IBOutlet private weak var newsDesc: UILabel!
     
     fileprivate func loadData(news: NewsObject?) {
-        newsImageView.downloadImageFrom(link: news?.image ?? "", contentMode: .scaleAspectFill)
+        newsImageView.downloadImageFrom(link: news?.image ?? "", contentMode: .scaleToFill)
         newsTitle.text = news?.title
         newsDesc.text = news?.description
         newsDate.text = DateFormatters.defaultDateFormatter().string(from: news?.date ?? Date())

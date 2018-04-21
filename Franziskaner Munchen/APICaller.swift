@@ -101,18 +101,6 @@ class APICaller {
         print("URL-> \(urlRequest)")
         let dataTask = urlSession.dataTask(with: urlRequest, completionHandler: { data, response, error in
             
-            // RequestBody String
-            var requestString = ""
-            if let content = urlRequest.httpBody {
-                requestString = String(data: content, encoding: String.Encoding.utf8)!
-            }
-            
-            // Request URL String
-            var requestURLString = ""
-            if let URLString = response?.url?.absoluteString {
-                requestURLString = URLString
-            }
-            
             if let httpResponse = response as? HTTPURLResponse {
                 var statusCode = httpResponse.statusCode
                 var responseString:String = ""
@@ -184,6 +172,26 @@ class APICaller {
         enqueueRequest(.GET, .dashboardCover, onSuccessResponse: { response in
             Parser.sharedInstance.parseDashboardCover(jsonString: response, onSuccess: { cover in
                 onSuccess(cover)
+            })
+        }, onErrorMessage: { error in
+            onError(error)
+        })
+    }
+    
+    internal func getPhotos(onSuccess: @escaping (Photos?) -> Void,onError: @escaping OnErrorMessage) {
+        enqueueRequest(.GET, .galleryPhotos, onSuccessResponse: { response in
+            Parser.sharedInstance.parseGalleryPhotos(jsonString: response, onSuccess: { photos in
+                onSuccess(photos)
+            })
+        }, onErrorMessage: { error in
+            onError(error)
+        })
+    }
+    
+    internal func getVideos(onSuccess: @escaping (Videos?) -> Void, onError: @escaping OnErrorMessage) {
+        enqueueRequest(.GET, .galleryVideos, onSuccessResponse: { response in
+            Parser.sharedInstance.parseGalleryVideos(jsonString: response, onSuccess: { videos in
+                onSuccess(videos)
             })
         }, onErrorMessage: { error in
             onError(error)

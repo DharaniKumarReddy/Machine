@@ -15,11 +15,15 @@ class NotificationsViewController: UIViewController {
     
     // MARK:- IBOutlets
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var galleryPhotosView: UIView!
+    @IBOutlet private weak var galleryVideosView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         getNotifications()
+        addBorder(view: galleryPhotosView, color: UIColor.white.cgColor)
+        addBorder(view: galleryVideosView, color: UIColor.white.cgColor)
         // Do any additional setup after loading the view.
     }
     
@@ -50,10 +54,17 @@ class NotificationsTableCell: UITableViewCell {
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descLabel: UILabel!
+    @IBOutlet private weak var borderView: UIView!
     
     fileprivate func loadCell(notification: Notification) {
         dateLabel.text = DateFormatters.defaultDateFormatter().string(from: notification.date)
         titleLabel.text = notification.title
         descLabel.text = notification.description
+        addBorder(view: borderView, color: UIColor(red: 191/255, green: 191/255, blue: 199/255, alpha: 1.0).cgColor)
     }
+}
+
+func addBorder(view: UIView, color: CGColor) {
+    view.layer.borderColor = color
+    view.layer.borderWidth = 3
 }

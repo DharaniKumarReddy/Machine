@@ -14,12 +14,14 @@ class HomeViewController: UIViewController {
     var coverPhotos: [Photo] = []
     // MARK:- IBoutlets
     @IBOutlet private weak var slidingImageView: UIImageView!
+    @IBOutlet private weak var bottomHalfTopConstrait: NSLayoutConstraint!
     
     // MARK:- Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
 
         getDashboardCover()
+        bottomHalfTopConstrait.constant = iPhonePlus ? 30 : 16
         // Do any additional setup after loading the view.
     }
     
@@ -52,4 +54,25 @@ class HomeViewController: UIViewController {
             })
         }
     }
+    
+    // MARK:- IBActions
+    @IBAction private func galleryButton_Tapped() {
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+        let photoAction = UIAlertAction(title: "Photo", style: .default) { action in
+            let photoController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PhotosViewController")
+            self.navigationController?.pushViewController(photoController, animated: true)
+        }
+        actionSheet.addAction(photoAction)
+        let videoAction = UIAlertAction(title: "Video", style: .default) { action in
+            let videoController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "VideosViewController")
+            self.navigationController?.pushViewController(videoController, animated: true)
+        }
+        actionSheet.addAction(videoAction)
+        present(actionSheet, animated: true, completion: nil)
+    }
+    
+    @IBAction private func enquiryButton_Tapped() {
+        openWebPage(url: "http://testlink4clients.com/testlink/franziskaner/contact.php")
+    }
+    
 }

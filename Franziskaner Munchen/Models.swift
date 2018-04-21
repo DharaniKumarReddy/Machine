@@ -49,3 +49,25 @@ struct Notifications {
     internal var success: Int
     internal var message: String
 }
+
+// MARK:- Photos
+struct Photos {
+    internal var gallery: [Photo]
+    internal var success: Int
+    internal var message: String
+}
+
+// MARK:- Videos
+struct Video {
+    internal var id: String
+    internal var vTitle: String
+    internal var vId: String
+    internal var vDate: String
+    internal var vDescription: String
+    internal var updatedDate: String
+}
+struct Videos {
+    internal var video: [Video]
+    internal var success: Int
+    internal var message: String
+}

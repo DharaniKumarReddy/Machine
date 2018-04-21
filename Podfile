@@ -8,6 +8,7 @@ def list_of_library
     # more pods...
     pod 'SlideMenuControllerSwift', :git => 'https://github.com/dekatotoro/SlideMenuControllerSwift', :branch => 'swift4'
     pod 'SwiftyJSON'
+    pod 'YouTubePlayer'
     # even more pods...
 end
 

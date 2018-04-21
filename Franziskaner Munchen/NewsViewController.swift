@@ -83,7 +83,7 @@ class NewsTableCell: UITableViewCell {
     @IBOutlet private weak var newsDescLabel: UILabel!
     
     fileprivate func loadData(news: NewsObject) {
-        newsImageView.downloadImageFrom(link: news.image, contentMode: .scaleAspectFill)
+        newsImageView.downloadImageFrom(link: news.image, contentMode: .scaleToFill)
         newsDateLabel.text = DateFormatters.defaultDateFormatter().string(from: news.date)
         newsTitleLabel.text = news.title
         newsDescLabel.text = news.description

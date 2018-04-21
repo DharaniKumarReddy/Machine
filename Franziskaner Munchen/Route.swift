@@ -14,6 +14,9 @@ enum Route {
     case news
     case notifications
     case dashboardCover
+    case missionsTeam
+    case galleryPhotos
+    case galleryVideos
     
     var absoluteURL: URL {
         return URL(string: Base_Url + apiPath)!
@@ -27,6 +30,12 @@ enum Route {
             return "/shortnotification.php"
         case .dashboardCover:
             return "/franziskaner/franziskaner_cphoto.php"
+        case .missionsTeam:
+            return "/franziskaner_mgteam.php"
+        case .galleryPhotos:
+            return "/franziskanergallery.php"
+        case .galleryVideos:
+            return "/franziskaner_videos.php"
         }
     }
 }
