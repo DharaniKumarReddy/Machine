@@ -11,7 +11,7 @@ import SlideMenuControllerSwift
 
 let screenWidth     = UIScreen.main.bounds.width
 let screenHeight    = UIScreen.main.bounds.height
-//let iPhoneX         = screenHeight == 812.0
+let iPhoneX         = screenHeight == 812.0
 let iPhonePlus      = screenHeight == 736.0
 
 class DashboardViewController: UIViewController {
@@ -99,7 +99,7 @@ class DashboardViewController: UIViewController {
     private func loadContainer(controller: UIViewController) {
         addChildViewController(controller)
         view.addSubview(controller.view)
-        controller.view.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight-60)
+        controller.view.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight-(iPhoneX ? 84 : 60))
         controller.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         controller.didMove(toParentViewController: self)
     }

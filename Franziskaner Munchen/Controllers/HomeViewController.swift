@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
 
     // MARK:- Variables
     var coverPhotos: [Photo] = []
+    
     // MARK:- IBoutlets
     @IBOutlet private weak var slidingImageView: UIImageView!
     @IBOutlet private weak var bottomHalfTopConstrait: NSLayoutConstraint!
@@ -73,6 +74,14 @@ class HomeViewController: UIViewController {
     
     @IBAction private func enquiryButton_Tapped() {
         openWebPage(url: "http://testlink4clients.com/testlink/franziskaner/contact.php")
+    }
+    
+    @IBAction private func spendenButton_Tapped() {
+        openWebPage(url: "http://franciscansmunich.com/donate.html")
+    }
+    
+    @IBAction private func bolivienButton_Tapped() {
+        
     }
     
 }

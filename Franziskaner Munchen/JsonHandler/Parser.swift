@@ -115,4 +115,25 @@ class Parser {
             onSuccess(Videos(video: videosArray, success: success, message: message))
         }
     }
+    
+    func parseProjectData(jsonString: String, onSuccess: (ProjectData?) -> Void) {
+        if let dataFromString = jsonString.data(using: .utf8, allowLossyConversion: false) {
+            let json = try? JSON(data: dataFromString)
+            let success = json?["success"].intValue ?? 0
+            let projects = json?["project"].arrayValue ?? []
+            var projectData: [Project] = []
+            for project in projects {
+                let id = project["id"].stringValue
+                let title = project["title"].stringValue
+                let description = project["description"].stringValue
+                let image = project["image"].stringValue
+                let date = DateFormatters.defaultDateFormatter().date(from: project["date"].stringValue) ?? Date()
+                let updatedDate = project["updated_date"].stringValue
+                let createdDate = project["created_date"].stringValue
+                let project = Project(id: id, title: title, desc: description, image: image, date: date, updatedDate: updatedDate, createdDate: createdDate)
+                projectData.append(project)
+            }
+            onSuccess(ProjectData(data: projectData, success: success))
+        }
+    }
 }

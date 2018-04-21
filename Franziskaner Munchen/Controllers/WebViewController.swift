@@ -7,32 +7,35 @@
 //
 
 import UIKit
+import WebKit
 
-class WebViewController: UIViewController, UIWebViewDelegate {
+class WebViewController: UIViewController, WKNavigationDelegate {
 
     // MARK:- Variables
     internal var webUrl: String?
     
     // MARK:- IBOutlets
     @IBOutlet private weak var loadingIndicator: UIActivityIndicatorView!
-    @IBOutlet private weak var webView: UIWebView!
+    @IBOutlet weak var webView: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         loadingIndicator.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
         loadingIndicator.startAnimating()
+        webView.navigationDelegate = self
         loadWebView()
+        navigationItem.addTitleView()
     }
     
     private func loadWebView() {
         if let url = URL(string: webUrl ?? "http://franciscansmunich.com/") {
             let urlRequest = URLRequest(url: url)
-            webView.loadRequest(urlRequest)
+            webView.load(urlRequest) //loadRequest(urlRequest)
         }
     }
-
-    func webViewDidFinishLoad(_ webView: UIWebView) {
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         loadingIndicator.stopAnimating()
     }
 }

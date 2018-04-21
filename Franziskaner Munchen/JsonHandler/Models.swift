@@ -71,3 +71,18 @@ struct Videos {
     internal var success: Int
     internal var message: String
 }
+
+// MARK:- Project Data
+struct Project {
+    internal var id: String
+    internal var title: String
+    internal var desc: String
+    internal var image: String
+    internal var date: Date
+    internal var updatedDate: String
+    internal var createdDate: String
+}
+struct ProjectData {
+    internal var data: [Project]
+    internal var success: Int
+}

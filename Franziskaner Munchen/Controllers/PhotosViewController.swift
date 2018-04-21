@@ -21,6 +21,7 @@ class PhotosViewController: UIViewController {
         super.viewDidLoad()
 
         getPhotos()
+        navigationItem.addTitleView()
         // Do any additional setup after loading the view.
     }
     
@@ -45,7 +46,7 @@ extension PhotosViewController: UICollectionViewDataSource, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotosCollectionCell", for: indexPath) as! PhotosCollectionCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constant.CollectionViewCell.PhotosCollectionCell, for: indexPath) as! PhotosCollectionCell
         cell.photoImageView.downloadImageFrom(link: photos[indexPath.row].img, contentMode: .scaleToFill)
         return cell
     }

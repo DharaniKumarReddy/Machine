@@ -51,6 +51,7 @@ class NewsViewController: UIViewController {
     
     private func addPulltoRefreshControl() {
         refreshControl.attributedTitle = NSAttributedString(string: "")
+        refreshControl.tintColor = .white
         refreshControl.addTarget(self, action:#selector(NewsViewController.getNews), for: UIControlEvents.valueChanged)
         tableView.insertSubview(refreshControl, at: 0)
     }

@@ -9,9 +9,6 @@
 import UIKit
 
 class MenuViewController: UIViewController {
-    
-    // MARK:- Variables
-    var activityController : UIActivityViewController!
 
     // MARK:- IBOutlets
     @IBOutlet private weak var landscapeImageLeadingConstraint: NSLayoutConstraint!
@@ -63,27 +60,24 @@ class MenuViewController: UIViewController {
     }
     
     // MARK:- IBActions
-    @IBAction func direktorButton_Tapped() {
+    @IBAction private func direktorButton_Tapped() {
         openWebPage(url: "http://franciscansmunich.com/alfonsschumacher.html")
     }
     
-    @IBAction func missionTeamButton_Tapped() {
+    @IBAction private func missionTeamButton_Tapped() {
         openWebPage(url: Route.missionsTeam.absoluteURL.absoluteString)
     }
     
-    @IBAction func mailButton_Tapped(button: UIButton) {
-//        let fileURL =  Bundle.main.path(forResource: "newTest", ofType: "mail")
-//        let url = URL(fileURLWithPath: fileURL ?? "")
-//        documentController = UIDocumentInteractionController(url: url)
-//        documentController.presentOpenInMenu(from: button.frame, in: view, animated: true)
-//        let text = "Dharani Kumar"
-//        let recipients = URL(string: "mailto:dharani.reddy@emids.com")!
-//        let activityItems = [recipients] as [Any]
-//        activityController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
-//        activityController.excludedActivityTypes = [UIActivityType.postToFacebook, .postToTwitter, .postToWeibo, .message, .print, .copyToPasteboard, .assignToContact, .saveToCameraRoll, .addToReadingList, .postToFlickr, .postToVimeo, .postToTencentWeibo,.airDrop]
-////        activityController.setValue(string, forKey: "toRecipients")
-////        activityController.setValue("My Mail Subject", forKey: "subject")
-//        (slideMenuController()?.mainViewController as! UINavigationController).present(activityController, animated: true, completion: nil)
+    @IBAction private func callButton_Tapped() {
+        let number = "08921126110"
+        if let url = URL(string: "telprompt:\(number)") {
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        }
+    }
+    
+    @IBAction private func mailButton_Tapped(button: UIButton) {
         let email = "muenchen@franziskanermission.de"
         if let url = URL(string: "mailto:\(email)") {
             if UIApplication.shared.canOpenURL(url) {

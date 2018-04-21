@@ -16,10 +16,17 @@ struct Constant {
         static let NotificationsViewController  = "NotificationsViewController"
         static let WebViewController            = "WebViewController"
         static let NewsDetailedViewController   = "NewsDetailedViewController"
+        static let YoutubePlayerViewController  = "YoutubePlayerViewController"
     }
     
     struct TableViewCell {
         static let NewsTableCell                = "NewsTableCell"
         static let NotificationsTableCell       = "NotificationsTableCell"
+        static let ProjectTableCell             = "ProjectTableCell"
+    }
+    
+    struct CollectionViewCell {
+        static let PhotosCollectionCell         = "PhotosCollectionCell"
+        static let VideosCollectionCell         = "VideosCollectionCell"
     }
 }

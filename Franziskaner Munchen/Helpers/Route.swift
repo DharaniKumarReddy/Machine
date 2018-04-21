@@ -14,6 +14,9 @@ enum Route {
     case news
     case notifications
     case dashboardCover
+    case projectData
+    case bolivien
+    case mission
     case missionsTeam
     case galleryPhotos
     case galleryVideos
@@ -30,6 +33,12 @@ enum Route {
             return "/shortnotification.php"
         case .dashboardCover:
             return "/franziskaner/franziskaner_cphoto.php"
+        case .projectData:
+            return "/project_jsoncode.php"
+        case .bolivien:
+            return "/focus_jsoncode.php"
+        case .mission:
+            return "/mission_jsoncode.php"
         case .missionsTeam:
             return "/franziskaner_mgteam.php"
         case .galleryPhotos:

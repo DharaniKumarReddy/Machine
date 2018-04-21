@@ -178,6 +178,16 @@ class APICaller {
         })
     }
     
+    internal func getProjectData(onSuccess: @escaping (ProjectData?) -> Void, onError: @escaping OnErrorMessage) {
+        enqueueRequest(.GET, .projectData, onSuccessResponse: { response in
+            Parser.sharedInstance.parseProjectData(jsonString: response, onSuccess: { data in
+                onSuccess(data)
+            })
+        }, onErrorMessage: { error in
+            onError(error)
+        })
+    }
+    
     internal func getPhotos(onSuccess: @escaping (Photos?) -> Void,onError: @escaping OnErrorMessage) {
         enqueueRequest(.GET, .galleryPhotos, onSuccessResponse: { response in
             Parser.sharedInstance.parseGalleryPhotos(jsonString: response, onSuccess: { photos in
