@@ -188,6 +188,36 @@ class APICaller {
         })
     }
     
+    internal func getBolivienData(onSuccess: @escaping (Bolivien?) -> Void, onError: @escaping OnErrorMessage) {
+        enqueueRequest(.GET, .bolivien, onSuccessResponse: { response in
+            Parser.sharedInstance.parseBolivienData(jsonString: response, onSuccess: { bolivien in
+                onSuccess(bolivien)
+            })
+        }, onErrorMessage: { error in
+            
+        })
+    }
+    
+    internal func getMissionData(onSuccess: @escaping (Mission?) -> Void, onError: @escaping OnErrorMessage) {
+        enqueueRequest(.GET, .mission, onSuccessResponse: { response in
+            Parser.sharedInstance.parseMissionData(jsonString: response, onSuccess: { missionData in
+                onSuccess(missionData)
+            })
+        }, onErrorMessage: { error in
+            onError(error)
+        })
+    }
+    
+    internal func getMagazines(onSuccess: @escaping (Magazines?) -> Void, onError: @escaping OnErrorMessage) {
+        enqueueRequest(.GET, .magazine, onSuccessResponse: { response in
+            Parser.sharedInstance.parseMagazine(jsonString: response, onSuccess: { magazines in
+                onSuccess(magazines)
+            })
+        }, onErrorMessage: { error in
+            onError(error)
+        })
+    }
+    
     internal func getPhotos(onSuccess: @escaping (Photos?) -> Void,onError: @escaping OnErrorMessage) {
         enqueueRequest(.GET, .galleryPhotos, onSuccessResponse: { response in
             Parser.sharedInstance.parseGalleryPhotos(jsonString: response, onSuccess: { photos in

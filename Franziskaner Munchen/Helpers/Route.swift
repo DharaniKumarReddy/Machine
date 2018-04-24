@@ -17,6 +17,7 @@ enum Route {
     case projectData
     case bolivien
     case mission
+    case magazine
     case missionsTeam
     case galleryPhotos
     case galleryVideos
@@ -37,6 +38,8 @@ enum Route {
             return "/project_jsoncode.php"
         case .bolivien:
             return "/focus_jsoncode.php"
+        case .magazine:
+            return "/franziskaner_notification.php"
         case .mission:
             return "/mission_jsoncode.php"
         case .missionsTeam:

@@ -9,28 +9,37 @@
 /* Begin PBXBuildFile section */
 		7E5A66B0D12FCFBF8691E9A4 /* Pods_Franziskaner_Munchen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF12A9521BEC6DD0FC51E774 /* Pods_Franziskaner_Munchen.framework */; };
 		9A68B146879B9D2877FF6F13 /* Pods_Franziskaner_MunchenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F28CFFFF8144025A31F081DB /* Pods_Franziskaner_MunchenUITests.framework */; };
+		9F126F4A208E5B9400A82742 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F126F49208E5B9400A82742 /* PDFViewController.swift */; };
+		9F126F4B208E5B9400A82742 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F126F49208E5B9400A82742 /* PDFViewController.swift */; };
+		9F126F4C208E5B9400A82742 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F126F49208E5B9400A82742 /* PDFViewController.swift */; };
 		9F363D6B8B7F6E89357E5693 /* Pods_Franziskaner_MunchenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA124D27A91A41001235817 /* Pods_Franziskaner_MunchenTests.framework */; };
 		9F4B096A2084FF57006C7CDE /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B09692084FF57006C7CDE /* APICaller.swift */; };
 		9F4B096B2084FF57006C7CDE /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B09692084FF57006C7CDE /* APICaller.swift */; };
 		9F4B096C2084FF57006C7CDE /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B09692084FF57006C7CDE /* APICaller.swift */; };
-		9F9D397B208B2B790066935E /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D3975208B2B790066935E /* UINavigationControllerExtension.swift */; };
-		9F9D397C208B2B790066935E /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D3975208B2B790066935E /* UINavigationControllerExtension.swift */; };
-		9F9D397D208B2B790066935E /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D3975208B2B790066935E /* UINavigationControllerExtension.swift */; };
-		9F9D397E208B2B790066935E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D3976208B2B790066935E /* StringExtension.swift */; };
-		9F9D397F208B2B790066935E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D3976208B2B790066935E /* StringExtension.swift */; };
-		9F9D3980208B2B790066935E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D3976208B2B790066935E /* StringExtension.swift */; };
-		9F9D3981208B2B790066935E /* CAGradientLayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D3977208B2B790066935E /* CAGradientLayerExtension.swift */; };
-		9F9D3982208B2B790066935E /* CAGradientLayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D3977208B2B790066935E /* CAGradientLayerExtension.swift */; };
-		9F9D3983208B2B790066935E /* CAGradientLayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D3977208B2B790066935E /* CAGradientLayerExtension.swift */; };
-		9F9D3984208B2B790066935E /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D3978208B2B790066935E /* DateFormatterExtension.swift */; };
-		9F9D3985208B2B790066935E /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D3978208B2B790066935E /* DateFormatterExtension.swift */; };
-		9F9D3986208B2B790066935E /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D3978208B2B790066935E /* DateFormatterExtension.swift */; };
-		9F9D3987208B2B790066935E /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D3979208B2B790066935E /* UIImageViewExtension.swift */; };
-		9F9D3988208B2B790066935E /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D3979208B2B790066935E /* UIImageViewExtension.swift */; };
-		9F9D3989208B2B790066935E /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D3979208B2B790066935E /* UIImageViewExtension.swift */; };
-		9F9D398A208B2B790066935E /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D397A208B2B790066935E /* UIViewControllerExtension.swift */; };
-		9F9D398B208B2B790066935E /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D397A208B2B790066935E /* UIViewControllerExtension.swift */; };
-		9F9D398C208B2B790066935E /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D397A208B2B790066935E /* UIViewControllerExtension.swift */; };
+		9F5FBF2D208E37DE000D8529 /* MagazinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5FBF2C208E37DE000D8529 /* MagazinesViewController.swift */; };
+		9F5FBF2E208E37DE000D8529 /* MagazinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5FBF2C208E37DE000D8529 /* MagazinesViewController.swift */; };
+		9F5FBF2F208E37DE000D8529 /* MagazinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5FBF2C208E37DE000D8529 /* MagazinesViewController.swift */; };
+		9F7CF1C0208D7D4600548851 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BA208D7D4600548851 /* DateFormatterExtension.swift */; };
+		9F7CF1C1208D7D4600548851 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BA208D7D4600548851 /* DateFormatterExtension.swift */; };
+		9F7CF1C2208D7D4600548851 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BA208D7D4600548851 /* DateFormatterExtension.swift */; };
+		9F7CF1C3208D7D4600548851 /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BB208D7D4600548851 /* UINavigationControllerExtension.swift */; };
+		9F7CF1C4208D7D4600548851 /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BB208D7D4600548851 /* UINavigationControllerExtension.swift */; };
+		9F7CF1C5208D7D4600548851 /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BB208D7D4600548851 /* UINavigationControllerExtension.swift */; };
+		9F7CF1C6208D7D4600548851 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BC208D7D4600548851 /* UIViewControllerExtension.swift */; };
+		9F7CF1C7208D7D4600548851 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BC208D7D4600548851 /* UIViewControllerExtension.swift */; };
+		9F7CF1C8208D7D4600548851 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BC208D7D4600548851 /* UIViewControllerExtension.swift */; };
+		9F7CF1C9208D7D4600548851 /* CAGradientLayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BD208D7D4600548851 /* CAGradientLayerExtension.swift */; };
+		9F7CF1CA208D7D4600548851 /* CAGradientLayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BD208D7D4600548851 /* CAGradientLayerExtension.swift */; };
+		9F7CF1CB208D7D4600548851 /* CAGradientLayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BD208D7D4600548851 /* CAGradientLayerExtension.swift */; };
+		9F7CF1CC208D7D4600548851 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BE208D7D4600548851 /* UIImageViewExtension.swift */; };
+		9F7CF1CD208D7D4600548851 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BE208D7D4600548851 /* UIImageViewExtension.swift */; };
+		9F7CF1CE208D7D4600548851 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BE208D7D4600548851 /* UIImageViewExtension.swift */; };
+		9F7CF1CF208D7D4600548851 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BF208D7D4600548851 /* StringExtension.swift */; };
+		9F7CF1D0208D7D4600548851 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BF208D7D4600548851 /* StringExtension.swift */; };
+		9F7CF1D1208D7D4600548851 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BF208D7D4600548851 /* StringExtension.swift */; };
+		9F7CF1D3208D81F400548851 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1D2208D81F400548851 /* UIViewExtension.swift */; };
+		9F7CF1D4208D81F400548851 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1D2208D81F400548851 /* UIViewExtension.swift */; };
+		9F7CF1D5208D81F400548851 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1D2208D81F400548851 /* UIViewExtension.swift */; };
 		9F9D3992208B2C2A0066935E /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D3990208B2C2A0066935E /* Models.swift */; };
 		9F9D3993208B2C2A0066935E /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D3990208B2C2A0066935E /* Models.swift */; };
 		9F9D3994208B2C2A0066935E /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D3990208B2C2A0066935E /* Models.swift */; };
@@ -76,9 +85,6 @@
 		9F9D39C9208B2C7C0066935E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D39C5208B2C7C0066935E /* Constant.swift */; };
 		9F9D39CA208B2C7C0066935E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D39C5208B2C7C0066935E /* Constant.swift */; };
 		9F9D39CB208B2C7C0066935E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D39C5208B2C7C0066935E /* Constant.swift */; };
-		9F9D39CD208B9BFC0066935E /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D39CC208B9BFC0066935E /* UIViewExtension.swift */; };
-		9F9D39CE208B9BFC0066935E /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D39CC208B9BFC0066935E /* UIViewExtension.swift */; };
-		9F9D39CF208B9BFC0066935E /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D39CC208B9BFC0066935E /* UIViewExtension.swift */; };
 		9FC7D3BE2081036D00F26BC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC7D3BC2081036C00F26BC5 /* LaunchScreen.storyboard */; };
 		9FC7D3BF2081036D00F26BC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC7D3BC2081036C00F26BC5 /* LaunchScreen.storyboard */; };
 		9FC7D3C02081036D00F26BC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC7D3BC2081036C00F26BC5 /* LaunchScreen.storyboard */; };
@@ -112,13 +118,16 @@
 		32BCB02F67C3893C9FE69767 /* Pods-Franziskaner MunchenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Franziskaner MunchenTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Franziskaner MunchenTests/Pods-Franziskaner MunchenTests.release.xcconfig"; sourceTree = "<group>"; };
 		748DEEF1264CF5CCA2BD2DC8 /* Pods-Franziskaner MunchenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Franziskaner MunchenUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Franziskaner MunchenUITests/Pods-Franziskaner MunchenUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		85059D27D49008D21D7B401C /* Pods-Franziskaner Munchen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Franziskaner Munchen.release.xcconfig"; path = "Pods/Target Support Files/Pods-Franziskaner Munchen/Pods-Franziskaner Munchen.release.xcconfig"; sourceTree = "<group>"; };
+		9F126F49208E5B9400A82742 /* PDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
 		9F4B09692084FF57006C7CDE /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
-		9F9D3975208B2B790066935E /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UINavigationControllerExtension.swift; path = "Franziskaner Munchen/Extensions/UINavigationControllerExtension.swift"; sourceTree = SOURCE_ROOT; };
-		9F9D3976208B2B790066935E /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = "Franziskaner Munchen/Extensions/StringExtension.swift"; sourceTree = SOURCE_ROOT; };
-		9F9D3977208B2B790066935E /* CAGradientLayerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CAGradientLayerExtension.swift; path = "Franziskaner Munchen/Extensions/CAGradientLayerExtension.swift"; sourceTree = SOURCE_ROOT; };
-		9F9D3978208B2B790066935E /* DateFormatterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateFormatterExtension.swift; path = "Franziskaner Munchen/Extensions/DateFormatterExtension.swift"; sourceTree = SOURCE_ROOT; };
-		9F9D3979208B2B790066935E /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImageViewExtension.swift; path = "Franziskaner Munchen/Extensions/UIImageViewExtension.swift"; sourceTree = SOURCE_ROOT; };
-		9F9D397A208B2B790066935E /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewControllerExtension.swift; path = "Franziskaner Munchen/Extensions/UIViewControllerExtension.swift"; sourceTree = SOURCE_ROOT; };
+		9F5FBF2C208E37DE000D8529 /* MagazinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazinesViewController.swift; sourceTree = "<group>"; };
+		9F7CF1BA208D7D4600548851 /* DateFormatterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
+		9F7CF1BB208D7D4600548851 /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
+		9F7CF1BC208D7D4600548851 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		9F7CF1BD208D7D4600548851 /* CAGradientLayerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAGradientLayerExtension.swift; sourceTree = "<group>"; };
+		9F7CF1BE208D7D4600548851 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		9F7CF1BF208D7D4600548851 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		9F7CF1D2208D81F400548851 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		9F9D3990208B2C2A0066935E /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		9F9D3991208B2C2A0066935E /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		9F9D3998208B2C350066935E /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
@@ -134,7 +143,6 @@
 		9F9D39C0208B2C4B0066935E /* YoutubePlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubePlayerViewController.swift; sourceTree = "<group>"; };
 		9F9D39C4208B2C7C0066935E /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		9F9D39C5208B2C7C0066935E /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		9F9D39CC208B9BFC0066935E /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIViewExtension.swift; path = "Franziskaner Munchen/UIViewExtension.swift"; sourceTree = SOURCE_ROOT; };
 		9FC7D3BD2081036C00F26BC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9FFC4C8F208081F000563094 /* Franziskaner Munchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Franziskaner Munchen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FFC4C92208081F000563094 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -191,19 +199,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9F9D3974208B2B670066935E /* Extensions */ = {
+		9F7CF1B9208D7D2B00548851 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				9F9D3977208B2B790066935E /* CAGradientLayerExtension.swift */,
-				9F9D3978208B2B790066935E /* DateFormatterExtension.swift */,
-				9F9D3976208B2B790066935E /* StringExtension.swift */,
-				9F9D3979208B2B790066935E /* UIImageViewExtension.swift */,
-				9F9D3975208B2B790066935E /* UINavigationControllerExtension.swift */,
-				9F9D397A208B2B790066935E /* UIViewControllerExtension.swift */,
-				9F9D39CC208B9BFC0066935E /* UIViewExtension.swift */,
+				9F7CF1BD208D7D4600548851 /* CAGradientLayerExtension.swift */,
+				9F7CF1BA208D7D4600548851 /* DateFormatterExtension.swift */,
+				9F7CF1BF208D7D4600548851 /* StringExtension.swift */,
+				9F7CF1BE208D7D4600548851 /* UIImageViewExtension.swift */,
+				9F7CF1BB208D7D4600548851 /* UINavigationControllerExtension.swift */,
+				9F7CF1BC208D7D4600548851 /* UIViewControllerExtension.swift */,
+				9F7CF1D2208D81F400548851 /* UIViewExtension.swift */,
 			);
-			name = Extensions;
-			path = "New Group";
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		9F9D398D208B2B810066935E /* Helpers */ = {
@@ -229,10 +236,12 @@
 			children = (
 				9F9D399A208B2C350066935E /* DashboardViewController.swift */,
 				9F9D39A0208B2C350066935E /* HomeViewController.swift */,
+				9F5FBF2C208E37DE000D8529 /* MagazinesViewController.swift */,
 				9F9D399D208B2C350066935E /* MenuViewController.swift */,
 				9F9D399B208B2C350066935E /* NewsDetailedViewController.swift */,
 				9F9D39A1208B2C350066935E /* NewsViewController.swift */,
 				9F9D3999208B2C350066935E /* NotificationsViewController.swift */,
+				9F126F49208E5B9400A82742 /* PDFViewController.swift */,
 				9F9D399C208B2C350066935E /* PhotosViewController.swift */,
 				9F9D399E208B2C350066935E /* ProjectViewController.swift */,
 				9F9D399F208B2C350066935E /* VideosViewController.swift */,
@@ -272,7 +281,7 @@
 				9F9D398F208B2BF90066935E /* Controllers */,
 				9F9D398E208B2BC10066935E /* JsonHandler */,
 				9F9D398D208B2B810066935E /* Helpers */,
-				9F9D3974208B2B670066935E /* Extensions */,
+				9F7CF1B9208D7D2B00548851 /* Extension */,
 				9FFC4C96208081F000563094 /* Main.storyboard */,
 				9FFC4C99208081F200563094 /* Assets.xcassets */,
 				9FC7D3BC2081036C00F26BC5 /* LaunchScreen.storyboard */,
@@ -574,28 +583,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F9D3984208B2B790066935E /* DateFormatterExtension.swift in Sources */,
 				9F9D39BA208B2C350066935E /* HomeViewController.swift in Sources */,
+				9F7CF1CF208D7D4600548851 /* StringExtension.swift in Sources */,
 				9F9D3992208B2C2A0066935E /* Models.swift in Sources */,
+				9F126F4A208E5B9400A82742 /* PDFViewController.swift in Sources */,
 				9F9D39B1208B2C350066935E /* MenuViewController.swift in Sources */,
-				9F9D3987208B2B790066935E /* UIImageViewExtension.swift in Sources */,
-				9F9D398A208B2B790066935E /* UIViewControllerExtension.swift in Sources */,
-				9F9D39CD208B9BFC0066935E /* UIViewExtension.swift in Sources */,
+				9F7CF1C0208D7D4600548851 /* DateFormatterExtension.swift in Sources */,
 				9F9D39AE208B2C350066935E /* PhotosViewController.swift in Sources */,
+				9F7CF1D3208D81F400548851 /* UIViewExtension.swift in Sources */,
+				9F7CF1C9208D7D4600548851 /* CAGradientLayerExtension.swift in Sources */,
 				9FFC4C93208081F000563094 /* AppDelegate.swift in Sources */,
 				9F9D39B4208B2C350066935E /* ProjectViewController.swift in Sources */,
+				9F7CF1C6208D7D4600548851 /* UIViewControllerExtension.swift in Sources */,
 				9F9D39A2208B2C350066935E /* WebViewController.swift in Sources */,
 				9F9D39BD208B2C350066935E /* NewsViewController.swift in Sources */,
+				9F7CF1CC208D7D4600548851 /* UIImageViewExtension.swift in Sources */,
 				9F9D39A8208B2C350066935E /* DashboardViewController.swift in Sources */,
-				9F9D397B208B2B790066935E /* UINavigationControllerExtension.swift in Sources */,
+				9F7CF1C3208D7D4600548851 /* UINavigationControllerExtension.swift in Sources */,
 				9F4B096A2084FF57006C7CDE /* APICaller.swift in Sources */,
 				9F9D39A5208B2C350066935E /* NotificationsViewController.swift in Sources */,
 				9F9D3995208B2C2A0066935E /* Parser.swift in Sources */,
 				9F9D39C9208B2C7C0066935E /* Constant.swift in Sources */,
 				9F9D39B7208B2C350066935E /* VideosViewController.swift in Sources */,
-				9F9D397E208B2B790066935E /* StringExtension.swift in Sources */,
+				9F5FBF2D208E37DE000D8529 /* MagazinesViewController.swift in Sources */,
 				9F9D39AB208B2C350066935E /* NewsDetailedViewController.swift in Sources */,
-				9F9D3981208B2B790066935E /* CAGradientLayerExtension.swift in Sources */,
 				9F9D39C6208B2C7C0066935E /* Route.swift in Sources */,
 				9F9D39C1208B2C4B0066935E /* YoutubePlayerViewController.swift in Sources */,
 			);
@@ -607,25 +618,27 @@
 			files = (
 				9F9D39B8208B2C350066935E /* VideosViewController.swift in Sources */,
 				9F9D39AF208B2C350066935E /* PhotosViewController.swift in Sources */,
+				9F7CF1D0208D7D4600548851 /* StringExtension.swift in Sources */,
+				9F126F4B208E5B9400A82742 /* PDFViewController.swift in Sources */,
 				9F9D39BB208B2C350066935E /* HomeViewController.swift in Sources */,
 				9F4B096B2084FF57006C7CDE /* APICaller.swift in Sources */,
 				9F9D39B2208B2C350066935E /* MenuViewController.swift in Sources */,
-				9F9D3985208B2B790066935E /* DateFormatterExtension.swift in Sources */,
-				9F9D39CE208B9BFC0066935E /* UIViewExtension.swift in Sources */,
-				9F9D3988208B2B790066935E /* UIImageViewExtension.swift in Sources */,
+				9F7CF1D4208D81F400548851 /* UIViewExtension.swift in Sources */,
+				9F7CF1C1208D7D4600548851 /* DateFormatterExtension.swift in Sources */,
+				9F7CF1CA208D7D4600548851 /* CAGradientLayerExtension.swift in Sources */,
 				9FFC4CA8208081F200563094 /* Franziskaner_MunchenTests.swift in Sources */,
 				9F9D39AC208B2C350066935E /* NewsDetailedViewController.swift in Sources */,
+				9F7CF1C7208D7D4600548851 /* UIViewControllerExtension.swift in Sources */,
 				9F9D3993208B2C2A0066935E /* Models.swift in Sources */,
-				9F9D397F208B2B790066935E /* StringExtension.swift in Sources */,
-				9F9D397C208B2B790066935E /* UINavigationControllerExtension.swift in Sources */,
+				9F7CF1CD208D7D4600548851 /* UIImageViewExtension.swift in Sources */,
 				9F9D39BE208B2C350066935E /* NewsViewController.swift in Sources */,
-				9F9D3982208B2B790066935E /* CAGradientLayerExtension.swift in Sources */,
+				9F7CF1C4208D7D4600548851 /* UINavigationControllerExtension.swift in Sources */,
 				9F9D3996208B2C2A0066935E /* Parser.swift in Sources */,
 				9F9D39A3208B2C350066935E /* WebViewController.swift in Sources */,
 				9F9D39A6208B2C350066935E /* NotificationsViewController.swift in Sources */,
 				9F9D39CA208B2C7C0066935E /* Constant.swift in Sources */,
-				9F9D398B208B2B790066935E /* UIViewControllerExtension.swift in Sources */,
 				9F9D39B5208B2C350066935E /* ProjectViewController.swift in Sources */,
+				9F5FBF2E208E37DE000D8529 /* MagazinesViewController.swift in Sources */,
 				9F9D39A9208B2C350066935E /* DashboardViewController.swift in Sources */,
 				9F9D39C7208B2C7C0066935E /* Route.swift in Sources */,
 				9F9D39C2208B2C4B0066935E /* YoutubePlayerViewController.swift in Sources */,
@@ -638,25 +651,27 @@
 			files = (
 				9F9D39B9208B2C350066935E /* VideosViewController.swift in Sources */,
 				9F9D39B0208B2C350066935E /* PhotosViewController.swift in Sources */,
+				9F7CF1D1208D7D4600548851 /* StringExtension.swift in Sources */,
+				9F126F4C208E5B9400A82742 /* PDFViewController.swift in Sources */,
 				9F9D39BC208B2C350066935E /* HomeViewController.swift in Sources */,
 				9F4B096C2084FF57006C7CDE /* APICaller.swift in Sources */,
 				9F9D39B3208B2C350066935E /* MenuViewController.swift in Sources */,
-				9F9D3986208B2B790066935E /* DateFormatterExtension.swift in Sources */,
-				9F9D39CF208B9BFC0066935E /* UIViewExtension.swift in Sources */,
-				9F9D3989208B2B790066935E /* UIImageViewExtension.swift in Sources */,
+				9F7CF1D5208D81F400548851 /* UIViewExtension.swift in Sources */,
+				9F7CF1C2208D7D4600548851 /* DateFormatterExtension.swift in Sources */,
+				9F7CF1CB208D7D4600548851 /* CAGradientLayerExtension.swift in Sources */,
 				9FFC4CB3208081F200563094 /* Franziskaner_MunchenUITests.swift in Sources */,
 				9F9D39AD208B2C350066935E /* NewsDetailedViewController.swift in Sources */,
+				9F7CF1C8208D7D4600548851 /* UIViewControllerExtension.swift in Sources */,
 				9F9D3994208B2C2A0066935E /* Models.swift in Sources */,
-				9F9D3980208B2B790066935E /* StringExtension.swift in Sources */,
-				9F9D397D208B2B790066935E /* UINavigationControllerExtension.swift in Sources */,
+				9F7CF1CE208D7D4600548851 /* UIImageViewExtension.swift in Sources */,
 				9F9D39BF208B2C350066935E /* NewsViewController.swift in Sources */,
-				9F9D3983208B2B790066935E /* CAGradientLayerExtension.swift in Sources */,
+				9F7CF1C5208D7D4600548851 /* UINavigationControllerExtension.swift in Sources */,
 				9F9D3997208B2C2A0066935E /* Parser.swift in Sources */,
 				9F9D39A4208B2C350066935E /* WebViewController.swift in Sources */,
 				9F9D39A7208B2C350066935E /* NotificationsViewController.swift in Sources */,
 				9F9D39CB208B2C7C0066935E /* Constant.swift in Sources */,
-				9F9D398C208B2B790066935E /* UIViewControllerExtension.swift in Sources */,
 				9F9D39B6208B2C350066935E /* ProjectViewController.swift in Sources */,
+				9F5FBF2F208E37DE000D8529 /* MagazinesViewController.swift in Sources */,
 				9F9D39AA208B2C350066935E /* DashboardViewController.swift in Sources */,
 				9F9D39C8208B2C7C0066935E /* Route.swift in Sources */,
 				9F9D39C3208B2C4B0066935E /* YoutubePlayerViewController.swift in Sources */,

@@ -86,3 +86,31 @@ struct ProjectData {
     internal var data: [Project]
     internal var success: Int
 }
+
+// MARK:- Bolivien
+struct Bolivien {
+    internal var focus: [Project]
+    internal var success: Int
+}
+
+// MARK:- Mission
+struct Mission {
+    internal var missionData: [Project]
+    internal var success: Int
+}
+
+// MARK:- Magazine
+struct Magazine {
+    internal var id: String
+    internal var urlPdf: String
+    internal var title: String
+    internal var date: Date
+    internal var image: String
+    internal var updatedAt: String
+}
+
+struct Magazines {
+    internal var magazines: [Magazine]
+    internal var success: Int
+    internal var message: String
+}

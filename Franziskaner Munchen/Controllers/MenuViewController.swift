@@ -77,6 +77,10 @@ class MenuViewController: UIViewController {
         }
     }
     
+    @IBAction private func webPageButton_Tapped() {
+        openWebPage(url: nil)
+    }
+    
     @IBAction private func mailButton_Tapped(button: UIButton) {
         let email = "muenchen@franziskanermission.de"
         if let url = URL(string: "mailto:\(email)") {

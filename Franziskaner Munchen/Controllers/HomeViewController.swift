@@ -11,18 +11,24 @@ import UIKit
 class HomeViewController: UIViewController {
 
     // MARK:- Variables
-    var coverPhotos: [Photo] = []
+    private var coverPhotos: [Photo] = []
+    private var magazines: [Magazine] = []
     
     // MARK:- IBoutlets
     @IBOutlet private weak var slidingImageView: UIImageView!
+    @IBOutlet private weak var magazineButton: UIButton!
     @IBOutlet private weak var bottomHalfTopConstrait: NSLayoutConstraint!
+    @IBOutlet private weak var magazineTopConstrait: NSLayoutConstraint!
     
     // MARK:- Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
 
         getDashboardCover()
+        getMagazines()
         bottomHalfTopConstrait.constant = iPhonePlus ? 30 : 16
+        magazineTopConstrait.constant = iPhoneX ? 5 : 1.5
+        magazineButton.addBorder(color: UIColor.white.cgColor)
         // Do any additional setup after loading the view.
     }
     
@@ -56,6 +62,20 @@ class HomeViewController: UIViewController {
         }
     }
     
+    private func getMagazines() {
+        APICaller.getInstance().getMagazines(onSuccess: { magazines in
+            self.magazines = magazines?.magazines ?? []
+            self.magazines.sort{ $0.date.compare($1.date) == .orderedDescending }
+            self.magazines.first?.image.downloadImage(completion: { image in
+                DispatchQueue.main.async {
+                    self.magazineButton.setImage(image, for: .normal)
+                }
+            })
+        }, onError: { error in
+            
+        })
+    }
+    
     // MARK:- IBActions
     @IBAction private func galleryButton_Tapped() {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
@@ -80,8 +100,45 @@ class HomeViewController: UIViewController {
         openWebPage(url: "http://franciscansmunich.com/donate.html")
     }
     
-    @IBAction private func bolivienButton_Tapped() {
-        
+    @IBAction private func magazineButton_Tapped() {
+        let magazineController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "MagazinesViewController") as! MagazinesViewController
+        magazineController.magazines = self.magazines
+        navigationController?.pushViewController(magazineController, animated: true)
     }
     
+    @IBAction private func socialButton_Tapped() {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+        let facebookAction = UIAlertAction(title: "Facebook", style: .default, handler: { _ in
+            self.openWebPage(url: "https://www.facebook.com/Franziskanermissionmuenchen/?ref=hl")
+        })
+        facebookAction.setValue(#imageLiteral(resourceName: "facebook"), forKey: "image")
+        alert.addAction(facebookAction)
+        
+        let twitterAction = UIAlertAction(title: "Twitter", style: .default, handler: { _ in
+            
+        })
+        twitterAction.setValue(#imageLiteral(resourceName: "twitter"), forKey: "image")
+        alert.addAction(twitterAction)
+        
+        let youtubeAction = UIAlertAction(title: "Youtube", style: .default, handler: { _ in
+            
+        })
+        youtubeAction.setValue(#imageLiteral(resourceName: "youtube"), forKey: "image")
+        alert.addAction(youtubeAction)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    // MARK:- Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationController = segue.destination as! ProjectViewController
+        switch segue.identifier ?? "" {
+        case "Project":
+            destinationController.projectType = .project
+        case "Bolivien":
+            destinationController.projectType = .bolivien
+        default:
+            destinationController.projectType = .mission
+        }
+    }
 }

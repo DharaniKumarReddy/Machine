@@ -12,6 +12,7 @@ class NotificationsViewController: UIViewController {
 
     // MARK:- Variables
     var notifications: [Notification] = []
+    lazy var refreshControl = UIRefreshControl()
     
     // MARK:- IBOutlets
     @IBOutlet private weak var tableView: UITableView!
@@ -24,17 +25,26 @@ class NotificationsViewController: UIViewController {
         getNotifications()
         galleryPhotosView.addBorder(color: UIColor.white.cgColor)
         galleryVideosView.addBorder(color: UIColor.white.cgColor)
+        addPulltoRefreshControl()
         // Do any additional setup after loading the view.
     }
     
-    private func getNotifications() {
+    @objc private func getNotifications() {
         APICaller.getInstance().getNotifications(
             onSuccess: { notifications in
                 self.notifications = notifications?.shortNotifications ?? []
+                self.refreshControl.endRefreshing()
                 self.tableView.reloadData()
         }, onError: { error in
             
         })
+    }
+    
+    private func addPulltoRefreshControl() {
+        refreshControl.attributedTitle = NSAttributedString(string: "")
+        refreshControl.tintColor = .white
+        refreshControl.addTarget(self, action:#selector(NotificationsViewController.getNotifications), for: UIControlEvents.valueChanged)
+        tableView.insertSubview(refreshControl, at: 0)
     }
 }
 

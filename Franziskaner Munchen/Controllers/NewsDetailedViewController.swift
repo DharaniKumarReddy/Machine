@@ -11,10 +11,23 @@ import UIKit
 class NewsDetailedViewController: UIViewController {
 
     // MARK:- Variables
-    internal var news: NewsObject?
+    private var id: String?
+    private var imageUrl: String?
+    private var titleString: String?
+    private var desc: String?
+    private var date: Date?
     fileprivate var activityController : UIActivityViewController!
     
+    // MARK:- IBOutlets
     @IBOutlet private weak var tableView: UITableView!
+    
+    func configure(id: String?, title: String?, description: String?, image: String?, date: Date?) {
+        titleString = title
+        desc = description
+        imageUrl = image
+        self.date = date
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,7 +39,7 @@ class NewsDetailedViewController: UIViewController {
     }
     
     private func loadActivityController() {
-        let url = URL(string: "http://franciscansmunich.com/newsshare.php?id=\(news?.id ?? "")")!
+        let url = URL(string: "http://franciscansmunich.com/newsshare.php?id=\(id ?? "")")!
         let activityItems = [url] as [Any]
         activityController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
         activityController.excludedActivityTypes = [.print, .copyToPasteboard, .assignToContact, .saveToCameraRoll, .addToReadingList]
@@ -40,7 +53,7 @@ extension NewsDetailedViewController: UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsDetailedTableCell") as! NewsDetailedTableCell
         cell.delegate = self
-        cell.loadData(news: news)
+        cell.loadData(title: titleString, description: desc, image: imageUrl, date: date)
         return cell
     }
 }
@@ -62,20 +75,17 @@ class NewsDetailedTableCell: UITableViewCell {
     @IBOutlet private weak var newsDate: UILabel!
     @IBOutlet private weak var newsDesc: UILabel!
     
-    fileprivate func loadData(news: NewsObject?) {
-        newsImageView.downloadImageFrom(link: news?.image ?? "", contentMode: .scaleToFill)
-        newsTitle.text = news?.title
-        newsDesc.text = news?.description
-        newsDate.text = DateFormatters.defaultDateFormatter().string(from: news?.date ?? Date())
+    fileprivate func loadData(title: String?, description: String?, image: String?, date: Date?) {
+        contentView.addBorder(color: UIColor(red: 191/255, green: 191/255, blue: 191/255, alpha: 1.0).cgColor)
+        newsImageView.downloadImageFrom(link: image ?? "", contentMode: .scaleToFill)
+        newsTitle.text = title
+        newsDesc.text = description
+        newsDate.text = DateFormatters.defaultDateFormatter().string(from: date ?? Date())
     }
     
     // MARK:- IBActions
     @IBAction private func shareButton_Tapped() {
         delegate?.shareDetails()
-    }
-    
-    private func loadActivityController() {
-
     }
 }
 

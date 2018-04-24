@@ -121,19 +121,64 @@ class Parser {
             let json = try? JSON(data: dataFromString)
             let success = json?["success"].intValue ?? 0
             let projects = json?["project"].arrayValue ?? []
-            var projectData: [Project] = []
-            for project in projects {
-                let id = project["id"].stringValue
-                let title = project["title"].stringValue
-                let description = project["description"].stringValue
-                let image = project["image"].stringValue
-                let date = DateFormatters.defaultDateFormatter().date(from: project["date"].stringValue) ?? Date()
-                let updatedDate = project["updated_date"].stringValue
-                let createdDate = project["created_date"].stringValue
-                let project = Project(id: id, title: title, desc: description, image: image, date: date, updatedDate: updatedDate, createdDate: createdDate)
-                projectData.append(project)
-            }
+            let projectData: [Project] = getProjectData(projects: projects)
             onSuccess(ProjectData(data: projectData, success: success))
+        }
+    }
+    
+    func parseBolivienData(jsonString: String, onSuccess: (Bolivien?) -> Void) {
+        if let dataFromString = jsonString.data(using: .utf8, allowLossyConversion: false) {
+            let json = try? JSON(data: dataFromString)
+            let success = json?["success"].intValue ?? 0
+            let focus = json?["focus"].arrayValue ?? []
+            let focusData: [Project] = getProjectData(projects: focus)
+            onSuccess(Bolivien(focus: focusData, success: success))
+        }
+    }
+    
+    func parseMissionData(jsonString: String, onSuccess: (Mission?) -> Void) {
+        if let dataFromString = jsonString.data(using: .utf8, allowLossyConversion: false) {
+            let json = try? JSON(data: dataFromString)
+            let success = json?["success"].intValue ?? 0
+            let mission = json?["mission"].arrayValue ?? []
+            let missionData: [Project] = getProjectData(projects: mission)
+            onSuccess(Mission(missionData: missionData, success: success))
+        }
+    }
+    
+    private func getProjectData(projects: [JSON]) -> [Project] {
+        var projectData: [Project] = []
+        for project in projects {
+            let id = project["id"].stringValue
+            let title = project["title"].stringValue
+            let description = project["description"].stringValue
+            let image = project["image"].stringValue
+            let date = DateFormatters.defaultDateFormatter().date(from: project["date"].stringValue) ?? Date()
+            let updatedDate = project["updated_date"].stringValue
+            let createdDate = project["created_date"].stringValue
+            let project = Project(id: id, title: title, desc: description, image: image, date: date, updatedDate: updatedDate, createdDate: createdDate)
+            projectData.append(project)
+        }
+        return projectData
+    }
+    
+    func parseMagazine(jsonString: String, onSuccess: (Magazines) -> Void) {
+        if let dataFromString = jsonString.data(using: .utf8, allowLossyConversion: false) {
+            let json = try? JSON(data: dataFromString)
+            let success = json?["success"].intValue ?? 0
+            let message = json?["message"].stringValue ?? ""
+            let magazines = json?["notification"].arrayValue ?? []
+            var magazineData: [Magazine] = []
+            for magazine in magazines {
+                let id = magazine["id"].stringValue
+                let pdf = magazine["url_pdf"].stringValue
+                let title = magazine["title"].stringValue
+                let date = DateFormatters.defaultDateFormatter().date(from: magazine["date"].stringValue) ?? Date()
+                let image = magazine["image"].stringValue
+                let updatedDate = magazine["updated_at"].stringValue
+                magazineData.append(Magazine(id: id, urlPdf: pdf, title: title, date: date, image: image, updatedAt: updatedDate))
+            }
+            onSuccess(Magazines(magazines: magazineData, success: success, message: message))
         }
     }
 }
