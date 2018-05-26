@@ -17,8 +17,11 @@ class HomeViewController: UIViewController {
     // MARK:- IBoutlets
     @IBOutlet private weak var slidingImageView: UIImageView!
     @IBOutlet private weak var magazineButton: UIButton!
-    @IBOutlet private weak var bottomHalfTopConstrait: NSLayoutConstraint!
+    @IBOutlet private weak var logoHalfTopConstrait: NSLayoutConstraint!
     @IBOutlet private weak var magazineTopConstrait: NSLayoutConstraint!
+    @IBOutlet private weak var bottomHalfTopConstrait: NSLayoutConstraint!
+    @IBOutlet private weak var logoHalfBottomConstrait: NSLayoutConstraint!
+    @IBOutlet private weak var slidingImageViewHeightConstrait: NSLayoutConstraint!
     
     // MARK:- Life Cycle Methods
     override func viewDidLoad() {
@@ -28,6 +31,13 @@ class HomeViewController: UIViewController {
         getMagazines()
         bottomHalfTopConstrait.constant = iPhonePlus ? 30 : 16
         magazineTopConstrait.constant = iPhoneX ? 5 : 1.5
+        if iPhoneSE {
+            logoHalfTopConstrait.constant = -4
+            logoHalfBottomConstrait.constant = -4
+            slidingImageViewHeightConstrait.constant = 220
+            bottomHalfTopConstrait.constant = 9
+            magazineTopConstrait.constant = 2
+        }
         magazineButton.addBorder(color: UIColor.white.cgColor)
         // Do any additional setup after loading the view.
     }
@@ -79,7 +89,7 @@ class HomeViewController: UIViewController {
     // MARK:- IBActions
     @IBAction private func galleryButton_Tapped() {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-        let photoAction = UIAlertAction(title: "Photo", style: .default) { action in
+        let photoAction = UIAlertAction(title: "Fotos", style: .default) { action in
             let photoController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PhotosViewController")
             self.navigationController?.pushViewController(photoController, animated: true)
         }
@@ -89,6 +99,10 @@ class HomeViewController: UIViewController {
             self.navigationController?.pushViewController(videoController, animated: true)
         }
         actionSheet.addAction(videoAction)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {_ in
+            
+        })
+        actionSheet.addAction(cancelAction)
         present(actionSheet, animated: true, completion: nil)
     }
     
@@ -125,6 +139,11 @@ class HomeViewController: UIViewController {
         })
         youtubeAction.setValue(#imageLiteral(resourceName: "youtube"), forKey: "image")
         alert.addAction(youtubeAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: { _ in
+            
+        })
+        alert.addAction(cancelAction)
         
         present(alert, animated: true, completion: nil)
     }

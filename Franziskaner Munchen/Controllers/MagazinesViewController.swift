@@ -12,6 +12,7 @@ class MagazinesViewController: UIViewController {
 
     // MARK:- Variables
     internal var magazines: [Magazine] = []
+    fileprivate var activityController : UIActivityViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,13 @@ class MagazinesViewController: UIViewController {
         navigationItem.addTitleView()
         self.magazines.sort{ $0.date.compare($1.date) == .orderedDescending }
         // Do any additional setup after loading the view.
+    }
+    
+    private func loadActivityController(pdf: String) {
+        let url = URL(string: pdf)!
+        let activityItems = [url] as [Any]
+        activityController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+        activityController.excludedActivityTypes = [.print, .copyToPasteboard, .assignToContact, .saveToCameraRoll, .addToReadingList]
     }
 }
 
@@ -30,6 +38,7 @@ extension MagazinesViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MagazineTableCell") as! MagazineTableCell
         cell.delegate = self
+        cell.shareDelegate = self
         cell.loadData(magazine: magazines[indexPath.row])
         return cell
     }
@@ -43,9 +52,17 @@ extension MagazinesViewController: PDFDelegate {
     }
 }
 
+extension MagazinesViewController: shareDetailsDelegate {
+    func shareDetails(link: String) {
+        loadActivityController(pdf: link)
+        present(activityController, animated: true, completion: nil)
+    }
+}
+
 class MagazineTableCell: UITableViewCell {
     // MARK:- Variables
     internal weak var delegate: PDFDelegate?
+    fileprivate weak var shareDelegate: shareDetailsDelegate?
     private var pdf: String?
     
     // MARK:- IBOutlets
@@ -54,10 +71,15 @@ class MagazineTableCell: UITableViewCell {
     @IBOutlet private weak var magazineDate: UILabel!
     
     fileprivate func loadData(magazine: Magazine) {
-        magazineImageView.downloadImageFrom(link: magazine.image, contentMode: .scaleAspectFill)
+        magazineImageView.downloadImageFrom(link: magazine.image, contentMode: .scaleToFill)
         pdf = magazine.urlPdf
         magazineTitle.text = magazine.title
         magazineDate.text = DateFormatters.defaultDateFormatter().string(from: magazine.date)
+    }
+    
+    // MARK:- IBActions
+    @IBAction private func shareButton_Tapped() {
+        shareDelegate?.shareDetails(link: pdf ?? "")
     }
     
     @IBAction private func pdfButton_Tapped() {

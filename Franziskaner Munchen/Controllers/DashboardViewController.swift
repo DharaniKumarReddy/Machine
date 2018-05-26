@@ -13,6 +13,7 @@ let screenWidth     = UIScreen.main.bounds.width
 let screenHeight    = UIScreen.main.bounds.height
 let iPhoneX         = screenHeight == 812.0
 let iPhonePlus      = screenHeight == 736.0
+let iPhoneSE        = screenHeight == 568.0
 
 class DashboardViewController: UIViewController {
     
@@ -74,6 +75,9 @@ class DashboardViewController: UIViewController {
     
     private func loadTabs(index: Int) {
         guard index != currentIndex else {
+            return
+        }
+        if index < 0 || index >= tabs.count {
             return
         }
         loadContainer(controller: tabs[index])

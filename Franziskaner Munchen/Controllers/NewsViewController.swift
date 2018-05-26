@@ -73,7 +73,8 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         let newsDetailedController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: Constant.ViewControllerWithIdentifier.NewsDetailedViewController) as! NewsDetailedViewController
         let newsObject = news[indexPath.row]
-        newsDetailedController.configure(id: newsObject.id,title: newsObject.title, description: newsObject.description, image: newsObject.image, date: newsObject.date)
+        let share = "http://franciscansmunich.com/newsshare.php?id=\(newsObject.id)"
+        newsDetailedController.configure(share: share,title: newsObject.title, description: newsObject.description, image: newsObject.image, date: newsObject.date)
         navigationController?.pushViewController(newsDetailedController, animated: true)
     }
 }

@@ -11,7 +11,7 @@ import UIKit
 class NewsDetailedViewController: UIViewController {
 
     // MARK:- Variables
-    private var id: String?
+    private var share: String?
     private var imageUrl: String?
     private var titleString: String?
     private var desc: String?
@@ -21,7 +21,8 @@ class NewsDetailedViewController: UIViewController {
     // MARK:- IBOutlets
     @IBOutlet private weak var tableView: UITableView!
     
-    func configure(id: String?, title: String?, description: String?, image: String?, date: Date?) {
+    func configure(share: String?, title: String?, description: String?, image: String?, date: Date?) {
+        self.share = share
         titleString = title
         desc = description
         imageUrl = image
@@ -39,7 +40,7 @@ class NewsDetailedViewController: UIViewController {
     }
     
     private func loadActivityController() {
-        let url = URL(string: "http://franciscansmunich.com/newsshare.php?id=\(id ?? "")")!
+        let url = URL(string: share ?? "")!
         let activityItems = [url] as [Any]
         activityController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
         activityController.excludedActivityTypes = [.print, .copyToPasteboard, .assignToContact, .saveToCameraRoll, .addToReadingList]
@@ -59,7 +60,7 @@ extension NewsDetailedViewController: UITableViewDataSource, UITableViewDelegate
 }
 
 extension NewsDetailedViewController: shareDetailsDelegate {
-    func shareDetails() {
+    func shareDetails(link: String) {
         present(activityController, animated: true, completion: nil)
     }
 }
@@ -85,10 +86,10 @@ class NewsDetailedTableCell: UITableViewCell {
     
     // MARK:- IBActions
     @IBAction private func shareButton_Tapped() {
-        delegate?.shareDetails()
+        delegate?.shareDetails(link: "")
     }
 }
 
 protocol shareDetailsDelegate: class {
-    func shareDetails()
+    func shareDetails(link: String)
 }

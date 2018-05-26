@@ -29,7 +29,7 @@ class ProjectViewController: UIViewController {
 
         loadData()
         navigationItem.addTitleView()
-        tableView.estimatedRowHeight = 270
+        tableView.estimatedRowHeight = 292
         tableView.rowHeight = UITableViewAutomaticDimension
         addPulltoRefreshControl()
         // Do any additional setup after loading the view.
@@ -98,7 +98,16 @@ extension ProjectViewController: UITableViewDataSource, UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         let newsDetailedController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: Constant.ViewControllerWithIdentifier.NewsDetailedViewController) as! NewsDetailedViewController
         let project = projectData[indexPath.row]
-        newsDetailedController.configure(id: project.id, title: project.title, description: project.desc, image: project.image, date: project.date)
+        var share = ""
+        switch projectType ?? .project {
+        case .project:
+            share = "http://franciscansmunich.com/projectshare.php?id=\(project.id)"
+        case .bolivien:
+            share = "http://franciscansmunich.com/focusshare.php?id=\(project.id)"
+        case .mission:
+            share = "http://franciscansmunich.com/missionshare.php?id=\(project.id)"
+        }
+        newsDetailedController.configure(share: share, title: project.title, description: project.desc, image: project.image, date: project.date)
         navigationController?.pushViewController(newsDetailedController, animated: true)
     }
 }

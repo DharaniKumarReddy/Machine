@@ -29,7 +29,7 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     }
     
     private func loadWebView() {
-        if let url = URL(string: webUrl ?? "http://franciscansmunich.com/") {
+        if let url = URL(string: webUrl ?? "http://franziskaner-missionsverein.de/index.html") {
             let urlRequest = URLRequest(url: url)
             webView.load(urlRequest) //loadRequest(urlRequest)
         }

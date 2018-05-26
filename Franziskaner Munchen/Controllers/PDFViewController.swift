@@ -21,6 +21,7 @@ class PDFViewController: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationItem.addTitleView()
         activityIndicator.startAnimating()
         webview.navigationDelegate = self
         let request = URLRequest(url: URL(string: pdf ?? "")!)
