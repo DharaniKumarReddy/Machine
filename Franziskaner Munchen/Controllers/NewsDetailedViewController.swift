@@ -33,7 +33,7 @@ class NewsDetailedViewController: UIViewController {
         super.viewDidLoad()
 
         tableView.estimatedRowHeight = 230
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         navigationItem.addTitleView()
         loadActivityController()
         // Do any additional setup after loading the view.

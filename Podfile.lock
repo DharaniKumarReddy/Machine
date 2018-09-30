@@ -1,6 +1,6 @@
 PODS:
   - SlideMenuControllerSwift (3.0.2)
-  - SwiftyJSON (4.0.0)
+  - SwiftyJSON (4.2.0)
   - YouTubePlayer (0.4.0)
 
 DEPENDENCIES:
@@ -9,7 +9,7 @@ DEPENDENCIES:
   - YouTubePlayer
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - SwiftyJSON
     - YouTubePlayer
 
@@ -25,9 +25,9 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   SlideMenuControllerSwift: 9e8d2bba8ea9201c6207acb76e95a2841453ec9c
-  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   YouTubePlayer: 028451f6772f372d4759866db99824c676ac1473
 
 PODFILE CHECKSUM: c92d6313ba8b974ee8a919321843cf6b210aef07
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

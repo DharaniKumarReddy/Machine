@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 extension UIImageView {
-    func downloadImageFrom(link:String, contentMode: UIViewContentMode) {
+    func downloadImageFrom(link:String, contentMode: UIView.ContentMode) {
         if image == nil {
             image = #imageLiteral(resourceName: "no_image")
         }

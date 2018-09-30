@@ -30,7 +30,7 @@ class ProjectViewController: UIViewController {
         loadData()
         navigationItem.addTitleView()
         tableView.estimatedRowHeight = 292
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         addPulltoRefreshControl()
         // Do any additional setup after loading the view.
     }
@@ -78,7 +78,7 @@ class ProjectViewController: UIViewController {
     private func addPulltoRefreshControl() {
         refreshControl.attributedTitle = NSAttributedString(string: "")
         refreshControl.tintColor = .white
-        refreshControl.addTarget(self, action:#selector(ProjectViewController.loadData), for: UIControlEvents.valueChanged)
+        refreshControl.addTarget(self, action:#selector(ProjectViewController.loadData), for: UIControl.Event.valueChanged)
         tableView.insertSubview(refreshControl, at: 0)
     }
 }
@@ -89,14 +89,14 @@ extension ProjectViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constant.TableViewCell.ProjectTableCell) as! ProjectTableCell
-        cell.loadProject(project: projectData[indexPath.row])
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ProjectTableCell.self)) as? ProjectTableCell
+        cell?.loadProject(project: projectData[indexPath.row])
+        return cell ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let newsDetailedController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: Constant.ViewControllerWithIdentifier.NewsDetailedViewController) as! NewsDetailedViewController
+        let newsDetailedController = UIStoryboard(name: Constant.StoryBoard.Main, bundle: Bundle.main).instantiateViewController(withIdentifier: String(describing: NewsDetailedViewController.self)) as! NewsDetailedViewController
         let project = projectData[indexPath.row]
         var share = ""
         switch projectType ?? .project {

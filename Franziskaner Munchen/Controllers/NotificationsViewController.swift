@@ -43,7 +43,7 @@ class NotificationsViewController: UIViewController {
     private func addPulltoRefreshControl() {
         refreshControl.attributedTitle = NSAttributedString(string: "")
         refreshControl.tintColor = .white
-        refreshControl.addTarget(self, action:#selector(NotificationsViewController.getNotifications), for: UIControlEvents.valueChanged)
+        refreshControl.addTarget(self, action:#selector(NotificationsViewController.getNotifications), for: UIControl.Event.valueChanged)
         tableView.insertSubview(refreshControl, at: 0)
     }
 }
@@ -54,9 +54,9 @@ extension NotificationsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constant.TableViewCell.NotificationsTableCell) as! NotificationsTableCell
-        cell.loadCell(notification: notifications[indexPath.row])
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: NotificationsTableCell.self)) as? NotificationsTableCell
+        cell?.loadCell(notification: notifications[indexPath.row])
+        return cell ?? UITableViewCell()
     }
 }
 

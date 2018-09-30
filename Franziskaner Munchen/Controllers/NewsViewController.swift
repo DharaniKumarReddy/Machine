@@ -23,7 +23,7 @@ class NewsViewController: UIViewController {
         super.viewDidLoad()
 
         tableView.estimatedRowHeight = 240
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         loadingIndicator.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
         loadingIndicator.startAnimating()
         getNews()
@@ -52,7 +52,7 @@ class NewsViewController: UIViewController {
     private func addPulltoRefreshControl() {
         refreshControl.attributedTitle = NSAttributedString(string: "")
         refreshControl.tintColor = .white
-        refreshControl.addTarget(self, action:#selector(NewsViewController.getNews), for: UIControlEvents.valueChanged)
+        refreshControl.addTarget(self, action:#selector(NewsViewController.getNews), for: UIControl.Event.valueChanged)
         tableView.insertSubview(refreshControl, at: 0)
     }
 }
@@ -64,14 +64,14 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constant.TableViewCell.NewsTableCell) as! NewsTableCell
-        cell.loadData(news: news[indexPath.row])
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: NewsTableCell.self)) as? NewsTableCell
+        cell?.loadData(news: news[indexPath.row])
+        return cell ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let newsDetailedController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: Constant.ViewControllerWithIdentifier.NewsDetailedViewController) as! NewsDetailedViewController
+        let newsDetailedController = UIStoryboard(name: Constant.StoryBoard.Main, bundle: Bundle.main).instantiateViewController(withIdentifier: String(describing: NewsDetailedViewController.self)) as! NewsDetailedViewController
         let newsObject = news[indexPath.row]
         let share = "http://franciscansmunich.com/newsshare.php?id=\(newsObject.id)"
         newsDetailedController.configure(share: share,title: newsObject.title, description: newsObject.description, image: newsObject.image, date: newsObject.date)

@@ -9,90 +9,40 @@
 /* Begin PBXBuildFile section */
 		7E5A66B0D12FCFBF8691E9A4 /* Pods_Franziskaner_Munchen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF12A9521BEC6DD0FC51E774 /* Pods_Franziskaner_Munchen.framework */; };
 		9A68B146879B9D2877FF6F13 /* Pods_Franziskaner_MunchenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F28CFFFF8144025A31F081DB /* Pods_Franziskaner_MunchenUITests.framework */; };
+		9F005B1E215C91290024CDBA /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F005B1D215C91290024CDBA /* UIHelper.swift */; };
 		9F126F4A208E5B9400A82742 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F126F49208E5B9400A82742 /* PDFViewController.swift */; };
-		9F126F4B208E5B9400A82742 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F126F49208E5B9400A82742 /* PDFViewController.swift */; };
-		9F126F4C208E5B9400A82742 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F126F49208E5B9400A82742 /* PDFViewController.swift */; };
 		9F363D6B8B7F6E89357E5693 /* Pods_Franziskaner_MunchenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA124D27A91A41001235817 /* Pods_Franziskaner_MunchenTests.framework */; };
 		9F4B096A2084FF57006C7CDE /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B09692084FF57006C7CDE /* APICaller.swift */; };
-		9F4B096B2084FF57006C7CDE /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B09692084FF57006C7CDE /* APICaller.swift */; };
-		9F4B096C2084FF57006C7CDE /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B09692084FF57006C7CDE /* APICaller.swift */; };
 		9F5FBF2D208E37DE000D8529 /* MagazinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5FBF2C208E37DE000D8529 /* MagazinesViewController.swift */; };
-		9F5FBF2E208E37DE000D8529 /* MagazinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5FBF2C208E37DE000D8529 /* MagazinesViewController.swift */; };
-		9F5FBF2F208E37DE000D8529 /* MagazinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5FBF2C208E37DE000D8529 /* MagazinesViewController.swift */; };
 		9F7CF1C0208D7D4600548851 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BA208D7D4600548851 /* DateFormatterExtension.swift */; };
-		9F7CF1C1208D7D4600548851 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BA208D7D4600548851 /* DateFormatterExtension.swift */; };
-		9F7CF1C2208D7D4600548851 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BA208D7D4600548851 /* DateFormatterExtension.swift */; };
 		9F7CF1C3208D7D4600548851 /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BB208D7D4600548851 /* UINavigationControllerExtension.swift */; };
-		9F7CF1C4208D7D4600548851 /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BB208D7D4600548851 /* UINavigationControllerExtension.swift */; };
-		9F7CF1C5208D7D4600548851 /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BB208D7D4600548851 /* UINavigationControllerExtension.swift */; };
 		9F7CF1C6208D7D4600548851 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BC208D7D4600548851 /* UIViewControllerExtension.swift */; };
-		9F7CF1C7208D7D4600548851 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BC208D7D4600548851 /* UIViewControllerExtension.swift */; };
-		9F7CF1C8208D7D4600548851 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BC208D7D4600548851 /* UIViewControllerExtension.swift */; };
 		9F7CF1C9208D7D4600548851 /* CAGradientLayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BD208D7D4600548851 /* CAGradientLayerExtension.swift */; };
-		9F7CF1CA208D7D4600548851 /* CAGradientLayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BD208D7D4600548851 /* CAGradientLayerExtension.swift */; };
-		9F7CF1CB208D7D4600548851 /* CAGradientLayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BD208D7D4600548851 /* CAGradientLayerExtension.swift */; };
 		9F7CF1CC208D7D4600548851 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BE208D7D4600548851 /* UIImageViewExtension.swift */; };
-		9F7CF1CD208D7D4600548851 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BE208D7D4600548851 /* UIImageViewExtension.swift */; };
-		9F7CF1CE208D7D4600548851 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BE208D7D4600548851 /* UIImageViewExtension.swift */; };
 		9F7CF1CF208D7D4600548851 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BF208D7D4600548851 /* StringExtension.swift */; };
-		9F7CF1D0208D7D4600548851 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BF208D7D4600548851 /* StringExtension.swift */; };
-		9F7CF1D1208D7D4600548851 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1BF208D7D4600548851 /* StringExtension.swift */; };
 		9F7CF1D3208D81F400548851 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1D2208D81F400548851 /* UIViewExtension.swift */; };
-		9F7CF1D4208D81F400548851 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1D2208D81F400548851 /* UIViewExtension.swift */; };
-		9F7CF1D5208D81F400548851 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CF1D2208D81F400548851 /* UIViewExtension.swift */; };
 		9F9D3992208B2C2A0066935E /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D3990208B2C2A0066935E /* Models.swift */; };
-		9F9D3993208B2C2A0066935E /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D3990208B2C2A0066935E /* Models.swift */; };
-		9F9D3994208B2C2A0066935E /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D3990208B2C2A0066935E /* Models.swift */; };
 		9F9D3995208B2C2A0066935E /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D3991208B2C2A0066935E /* Parser.swift */; };
-		9F9D3996208B2C2A0066935E /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D3991208B2C2A0066935E /* Parser.swift */; };
-		9F9D3997208B2C2A0066935E /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D3991208B2C2A0066935E /* Parser.swift */; };
-		9F9D39A2208B2C350066935E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D3998208B2C350066935E /* WebViewController.swift */; };
-		9F9D39A3208B2C350066935E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D3998208B2C350066935E /* WebViewController.swift */; };
-		9F9D39A4208B2C350066935E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D3998208B2C350066935E /* WebViewController.swift */; };
+		9F9D39A2208B2C350066935E /* MyWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D3998208B2C350066935E /* MyWebViewController.swift */; };
 		9F9D39A5208B2C350066935E /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D3999208B2C350066935E /* NotificationsViewController.swift */; };
-		9F9D39A6208B2C350066935E /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D3999208B2C350066935E /* NotificationsViewController.swift */; };
-		9F9D39A7208B2C350066935E /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D3999208B2C350066935E /* NotificationsViewController.swift */; };
 		9F9D39A8208B2C350066935E /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D399A208B2C350066935E /* DashboardViewController.swift */; };
-		9F9D39A9208B2C350066935E /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D399A208B2C350066935E /* DashboardViewController.swift */; };
-		9F9D39AA208B2C350066935E /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D399A208B2C350066935E /* DashboardViewController.swift */; };
 		9F9D39AB208B2C350066935E /* NewsDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D399B208B2C350066935E /* NewsDetailedViewController.swift */; };
-		9F9D39AC208B2C350066935E /* NewsDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D399B208B2C350066935E /* NewsDetailedViewController.swift */; };
-		9F9D39AD208B2C350066935E /* NewsDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D399B208B2C350066935E /* NewsDetailedViewController.swift */; };
 		9F9D39AE208B2C350066935E /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D399C208B2C350066935E /* PhotosViewController.swift */; };
-		9F9D39AF208B2C350066935E /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D399C208B2C350066935E /* PhotosViewController.swift */; };
-		9F9D39B0208B2C350066935E /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D399C208B2C350066935E /* PhotosViewController.swift */; };
 		9F9D39B1208B2C350066935E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D399D208B2C350066935E /* MenuViewController.swift */; };
-		9F9D39B2208B2C350066935E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D399D208B2C350066935E /* MenuViewController.swift */; };
-		9F9D39B3208B2C350066935E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D399D208B2C350066935E /* MenuViewController.swift */; };
 		9F9D39B4208B2C350066935E /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D399E208B2C350066935E /* ProjectViewController.swift */; };
-		9F9D39B5208B2C350066935E /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D399E208B2C350066935E /* ProjectViewController.swift */; };
-		9F9D39B6208B2C350066935E /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D399E208B2C350066935E /* ProjectViewController.swift */; };
 		9F9D39B7208B2C350066935E /* VideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D399F208B2C350066935E /* VideosViewController.swift */; };
-		9F9D39B8208B2C350066935E /* VideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D399F208B2C350066935E /* VideosViewController.swift */; };
-		9F9D39B9208B2C350066935E /* VideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D399F208B2C350066935E /* VideosViewController.swift */; };
 		9F9D39BA208B2C350066935E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D39A0208B2C350066935E /* HomeViewController.swift */; };
-		9F9D39BB208B2C350066935E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D39A0208B2C350066935E /* HomeViewController.swift */; };
-		9F9D39BC208B2C350066935E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D39A0208B2C350066935E /* HomeViewController.swift */; };
 		9F9D39BD208B2C350066935E /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D39A1208B2C350066935E /* NewsViewController.swift */; };
-		9F9D39BE208B2C350066935E /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D39A1208B2C350066935E /* NewsViewController.swift */; };
-		9F9D39BF208B2C350066935E /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D39A1208B2C350066935E /* NewsViewController.swift */; };
 		9F9D39C1208B2C4B0066935E /* YoutubePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D39C0208B2C4B0066935E /* YoutubePlayerViewController.swift */; };
-		9F9D39C2208B2C4B0066935E /* YoutubePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D39C0208B2C4B0066935E /* YoutubePlayerViewController.swift */; };
-		9F9D39C3208B2C4B0066935E /* YoutubePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D39C0208B2C4B0066935E /* YoutubePlayerViewController.swift */; };
 		9F9D39C6208B2C7C0066935E /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D39C4208B2C7C0066935E /* Route.swift */; };
-		9F9D39C7208B2C7C0066935E /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D39C4208B2C7C0066935E /* Route.swift */; };
-		9F9D39C8208B2C7C0066935E /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D39C4208B2C7C0066935E /* Route.swift */; };
 		9F9D39C9208B2C7C0066935E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D39C5208B2C7C0066935E /* Constant.swift */; };
-		9F9D39CA208B2C7C0066935E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D39C5208B2C7C0066935E /* Constant.swift */; };
-		9F9D39CB208B2C7C0066935E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D39C5208B2C7C0066935E /* Constant.swift */; };
+		9FAD8E66215DE9B7006C0F78 /* PushNotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAD8E65215DE9B7006C0F78 /* PushNotificationHandler.swift */; };
 		9FC7D3BE2081036D00F26BC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC7D3BC2081036C00F26BC5 /* LaunchScreen.storyboard */; };
 		9FC7D3BF2081036D00F26BC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC7D3BC2081036C00F26BC5 /* LaunchScreen.storyboard */; };
 		9FC7D3C02081036D00F26BC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC7D3BC2081036C00F26BC5 /* LaunchScreen.storyboard */; };
 		9FFC4C93208081F000563094 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFC4C92208081F000563094 /* AppDelegate.swift */; };
 		9FFC4C98208081F000563094 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FFC4C96208081F000563094 /* Main.storyboard */; };
 		9FFC4C9A208081F200563094 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FFC4C99208081F200563094 /* Assets.xcassets */; };
-		9FFC4CA8208081F200563094 /* Franziskaner_MunchenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFC4CA7208081F200563094 /* Franziskaner_MunchenTests.swift */; };
-		9FFC4CB3208081F200563094 /* Franziskaner_MunchenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFC4CB2208081F200563094 /* Franziskaner_MunchenUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,8 +68,10 @@
 		32BCB02F67C3893C9FE69767 /* Pods-Franziskaner MunchenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Franziskaner MunchenTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Franziskaner MunchenTests/Pods-Franziskaner MunchenTests.release.xcconfig"; sourceTree = "<group>"; };
 		748DEEF1264CF5CCA2BD2DC8 /* Pods-Franziskaner MunchenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Franziskaner MunchenUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Franziskaner MunchenUITests/Pods-Franziskaner MunchenUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		85059D27D49008D21D7B401C /* Pods-Franziskaner Munchen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Franziskaner Munchen.release.xcconfig"; path = "Pods/Target Support Files/Pods-Franziskaner Munchen/Pods-Franziskaner Munchen.release.xcconfig"; sourceTree = "<group>"; };
+		9F005B1D215C91290024CDBA /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		9F126F49208E5B9400A82742 /* PDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
 		9F4B09692084FF57006C7CDE /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		9F5D1D21215BD6D9004FBC43 /* Franziskaner Munchen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Franziskaner Munchen.entitlements"; sourceTree = "<group>"; };
 		9F5FBF2C208E37DE000D8529 /* MagazinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazinesViewController.swift; sourceTree = "<group>"; };
 		9F7CF1BA208D7D4600548851 /* DateFormatterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
 		9F7CF1BB208D7D4600548851 /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
@@ -130,7 +82,7 @@
 		9F7CF1D2208D81F400548851 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		9F9D3990208B2C2A0066935E /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		9F9D3991208B2C2A0066935E /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
-		9F9D3998208B2C350066935E /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		9F9D3998208B2C350066935E /* MyWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWebViewController.swift; sourceTree = "<group>"; };
 		9F9D3999208B2C350066935E /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		9F9D399A208B2C350066935E /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		9F9D399B208B2C350066935E /* NewsDetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailedViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +95,7 @@
 		9F9D39C0208B2C4B0066935E /* YoutubePlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubePlayerViewController.swift; sourceTree = "<group>"; };
 		9F9D39C4208B2C7C0066935E /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		9F9D39C5208B2C7C0066935E /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		9FAD8E65215DE9B7006C0F78 /* PushNotificationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationHandler.swift; sourceTree = "<group>"; };
 		9FC7D3BD2081036C00F26BC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9FFC4C8F208081F000563094 /* Franziskaner Munchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Franziskaner Munchen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FFC4C92208081F000563094 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -217,7 +170,9 @@
 			isa = PBXGroup;
 			children = (
 				9F9D39C5208B2C7C0066935E /* Constant.swift */,
+				9FAD8E65215DE9B7006C0F78 /* PushNotificationHandler.swift */,
 				9F9D39C4208B2C7C0066935E /* Route.swift */,
+				9F005B1D215C91290024CDBA /* UIHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -245,7 +200,7 @@
 				9F9D399C208B2C350066935E /* PhotosViewController.swift */,
 				9F9D399E208B2C350066935E /* ProjectViewController.swift */,
 				9F9D399F208B2C350066935E /* VideosViewController.swift */,
-				9F9D3998208B2C350066935E /* WebViewController.swift */,
+				9F9D3998208B2C350066935E /* MyWebViewController.swift */,
 				9F9D39C0208B2C4B0066935E /* YoutubePlayerViewController.swift */,
 			);
 			path = Controllers;
@@ -276,6 +231,7 @@
 		9FFC4C91208081F000563094 /* Franziskaner Munchen */ = {
 			isa = PBXGroup;
 			children = (
+				9F5D1D21215BD6D9004FBC43 /* Franziskaner Munchen.entitlements */,
 				9FFC4C92208081F000563094 /* AppDelegate.swift */,
 				9F4B09692084FF57006C7CDE /* APICaller.swift */,
 				9F9D398F208B2BF90066935E /* Controllers */,
@@ -395,13 +351,21 @@
 				TargetAttributes = {
 					9FFC4C8E208081F000563094 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1000;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					9FFC4CA2208081F200563094 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1000;
 						TestTargetID = 9FFC4C8E208081F000563094;
 					};
 					9FFC4CAD208081F200563094 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1000;
 						TestTargetID = 9FFC4C8E208081F000563094;
 					};
 				};
@@ -588,6 +552,7 @@
 				9F9D3992208B2C2A0066935E /* Models.swift in Sources */,
 				9F126F4A208E5B9400A82742 /* PDFViewController.swift in Sources */,
 				9F9D39B1208B2C350066935E /* MenuViewController.swift in Sources */,
+				9F005B1E215C91290024CDBA /* UIHelper.swift in Sources */,
 				9F7CF1C0208D7D4600548851 /* DateFormatterExtension.swift in Sources */,
 				9F9D39AE208B2C350066935E /* PhotosViewController.swift in Sources */,
 				9F7CF1D3208D81F400548851 /* UIViewExtension.swift in Sources */,
@@ -595,7 +560,7 @@
 				9FFC4C93208081F000563094 /* AppDelegate.swift in Sources */,
 				9F9D39B4208B2C350066935E /* ProjectViewController.swift in Sources */,
 				9F7CF1C6208D7D4600548851 /* UIViewControllerExtension.swift in Sources */,
-				9F9D39A2208B2C350066935E /* WebViewController.swift in Sources */,
+				9F9D39A2208B2C350066935E /* MyWebViewController.swift in Sources */,
 				9F9D39BD208B2C350066935E /* NewsViewController.swift in Sources */,
 				9F7CF1CC208D7D4600548851 /* UIImageViewExtension.swift in Sources */,
 				9F9D39A8208B2C350066935E /* DashboardViewController.swift in Sources */,
@@ -607,6 +572,7 @@
 				9F9D39B7208B2C350066935E /* VideosViewController.swift in Sources */,
 				9F5FBF2D208E37DE000D8529 /* MagazinesViewController.swift in Sources */,
 				9F9D39AB208B2C350066935E /* NewsDetailedViewController.swift in Sources */,
+				9FAD8E66215DE9B7006C0F78 /* PushNotificationHandler.swift in Sources */,
 				9F9D39C6208B2C7C0066935E /* Route.swift in Sources */,
 				9F9D39C1208B2C4B0066935E /* YoutubePlayerViewController.swift in Sources */,
 			);
@@ -616,32 +582,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F9D39B8208B2C350066935E /* VideosViewController.swift in Sources */,
-				9F9D39AF208B2C350066935E /* PhotosViewController.swift in Sources */,
-				9F7CF1D0208D7D4600548851 /* StringExtension.swift in Sources */,
-				9F126F4B208E5B9400A82742 /* PDFViewController.swift in Sources */,
-				9F9D39BB208B2C350066935E /* HomeViewController.swift in Sources */,
-				9F4B096B2084FF57006C7CDE /* APICaller.swift in Sources */,
-				9F9D39B2208B2C350066935E /* MenuViewController.swift in Sources */,
-				9F7CF1D4208D81F400548851 /* UIViewExtension.swift in Sources */,
-				9F7CF1C1208D7D4600548851 /* DateFormatterExtension.swift in Sources */,
-				9F7CF1CA208D7D4600548851 /* CAGradientLayerExtension.swift in Sources */,
-				9FFC4CA8208081F200563094 /* Franziskaner_MunchenTests.swift in Sources */,
-				9F9D39AC208B2C350066935E /* NewsDetailedViewController.swift in Sources */,
-				9F7CF1C7208D7D4600548851 /* UIViewControllerExtension.swift in Sources */,
-				9F9D3993208B2C2A0066935E /* Models.swift in Sources */,
-				9F7CF1CD208D7D4600548851 /* UIImageViewExtension.swift in Sources */,
-				9F9D39BE208B2C350066935E /* NewsViewController.swift in Sources */,
-				9F7CF1C4208D7D4600548851 /* UINavigationControllerExtension.swift in Sources */,
-				9F9D3996208B2C2A0066935E /* Parser.swift in Sources */,
-				9F9D39A3208B2C350066935E /* WebViewController.swift in Sources */,
-				9F9D39A6208B2C350066935E /* NotificationsViewController.swift in Sources */,
-				9F9D39CA208B2C7C0066935E /* Constant.swift in Sources */,
-				9F9D39B5208B2C350066935E /* ProjectViewController.swift in Sources */,
-				9F5FBF2E208E37DE000D8529 /* MagazinesViewController.swift in Sources */,
-				9F9D39A9208B2C350066935E /* DashboardViewController.swift in Sources */,
-				9F9D39C7208B2C7C0066935E /* Route.swift in Sources */,
-				9F9D39C2208B2C4B0066935E /* YoutubePlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,32 +589,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F9D39B9208B2C350066935E /* VideosViewController.swift in Sources */,
-				9F9D39B0208B2C350066935E /* PhotosViewController.swift in Sources */,
-				9F7CF1D1208D7D4600548851 /* StringExtension.swift in Sources */,
-				9F126F4C208E5B9400A82742 /* PDFViewController.swift in Sources */,
-				9F9D39BC208B2C350066935E /* HomeViewController.swift in Sources */,
-				9F4B096C2084FF57006C7CDE /* APICaller.swift in Sources */,
-				9F9D39B3208B2C350066935E /* MenuViewController.swift in Sources */,
-				9F7CF1D5208D81F400548851 /* UIViewExtension.swift in Sources */,
-				9F7CF1C2208D7D4600548851 /* DateFormatterExtension.swift in Sources */,
-				9F7CF1CB208D7D4600548851 /* CAGradientLayerExtension.swift in Sources */,
-				9FFC4CB3208081F200563094 /* Franziskaner_MunchenUITests.swift in Sources */,
-				9F9D39AD208B2C350066935E /* NewsDetailedViewController.swift in Sources */,
-				9F7CF1C8208D7D4600548851 /* UIViewControllerExtension.swift in Sources */,
-				9F9D3994208B2C2A0066935E /* Models.swift in Sources */,
-				9F7CF1CE208D7D4600548851 /* UIImageViewExtension.swift in Sources */,
-				9F9D39BF208B2C350066935E /* NewsViewController.swift in Sources */,
-				9F7CF1C5208D7D4600548851 /* UINavigationControllerExtension.swift in Sources */,
-				9F9D3997208B2C2A0066935E /* Parser.swift in Sources */,
-				9F9D39A4208B2C350066935E /* WebViewController.swift in Sources */,
-				9F9D39A7208B2C350066935E /* NotificationsViewController.swift in Sources */,
-				9F9D39CB208B2C7C0066935E /* Constant.swift in Sources */,
-				9F9D39B6208B2C350066935E /* ProjectViewController.swift in Sources */,
-				9F5FBF2F208E37DE000D8529 /* MagazinesViewController.swift in Sources */,
-				9F9D39AA208B2C350066935E /* DashboardViewController.swift in Sources */,
-				9F9D39C8208B2C7C0066935E /* Route.swift in Sources */,
-				9F9D39C3208B2C4B0066935E /* YoutubePlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -764,7 +678,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -818,7 +732,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -832,19 +746,20 @@
 			baseConfigurationReference = 007DEE05C38F1CC15603027C /* Pods-Franziskaner Munchen.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Franziskaner Munchen/Franziskaner Munchen.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ARFDX9X37R;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = D245C92AL4;
 				INFOPLIST_FILE = "Franziskaner Munchen/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.integroinfotech.franziskanerMunchen;
+				PRODUCT_BUNDLE_IDENTIFIER = com.integro.franziskanermunchen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				PROVISIONING_PROFILE_SPECIFIER = Machine;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -854,19 +769,20 @@
 			baseConfigurationReference = 85059D27D49008D21D7B401C /* Pods-Franziskaner Munchen.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Franziskaner Munchen/Franziskaner Munchen.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ARFDX9X37R;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = D245C92AL4;
 				INFOPLIST_FILE = "Franziskaner Munchen/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.integroinfotech.franziskanerMunchen;
+				PRODUCT_BUNDLE_IDENTIFIER = com.integro.franziskanermunchen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				PROVISIONING_PROFILE_SPECIFIER = Machine;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -887,7 +803,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.integroinfotech.Franziskaner-MunchenTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Franziskaner Munchen.app/Franziskaner Munchen";
 			};
@@ -909,7 +825,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.integroinfotech.Franziskaner-MunchenTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Franziskaner Munchen.app/Franziskaner Munchen";
 			};
@@ -930,7 +846,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.integroinfotech.Franziskaner-MunchenUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Franziskaner Munchen";
 			};
@@ -951,7 +867,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.integroinfotech.Franziskaner-MunchenUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Franziskaner Munchen";
 			};

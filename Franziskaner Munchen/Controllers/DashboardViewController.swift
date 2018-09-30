@@ -41,6 +41,10 @@ class DashboardViewController: UIViewController {
         tabBarView.isHidden = false
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     // MARK:- Bar Button Action
     @IBAction func menuButton_Tapped(_ sender: Any) {
         slideMenuController()?.changeLeftViewWidth(screenWidth-screenWidth/5)
@@ -85,26 +89,40 @@ class DashboardViewController: UIViewController {
     }
     
     private func loadHome() -> UIViewController {
-        return UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: Constant.ViewControllerWithIdentifier.HomeViewController)
+        return UIStoryboard(name: Constant.StoryBoard.Main, bundle: Bundle.main).instantiateViewController(withIdentifier: String(describing: HomeViewController.self))
     }
     
     private func loadNews() -> UIViewController {
-        return UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: Constant.ViewControllerWithIdentifier.NewsViewController)
+        return UIStoryboard(name: Constant.StoryBoard.Main, bundle: Bundle.main).instantiateViewController(withIdentifier: String(describing: NewsViewController.self))
     }
     
     private func loadNotifications() -> UIViewController {
-        return UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: Constant.ViewControllerWithIdentifier.NotificationsViewController)
+        return UIStoryboard(name: Constant.StoryBoard.Main, bundle: Bundle.main).instantiateViewController(withIdentifier: String(describing: NotificationsViewController.self))
     }
     
     private func loadWeb() -> UIViewController {
-        return UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: Constant.ViewControllerWithIdentifier.WebViewController)
+        return UIStoryboard(name: Constant.StoryBoard.Main, bundle: Bundle.main).instantiateViewController(withIdentifier: String(describing: MyWebViewController.self))
+    }
+    
+    private func remove(asChildViewController viewController: UIViewController) {
+        // Notify Child View Controller
+        viewController.willMove(toParent: nil)
+        
+        // Remove Child View From Superview
+        viewController.view.removeFromSuperview()
+        
+        // Notify Child View Controller
+        viewController.removeFromParent()
     }
     
     private func loadContainer(controller: UIViewController) {
-        addChildViewController(controller)
-        view.addSubview(controller.view)
-        controller.view.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight-(iPhoneX ? 84 : 60))
-        controller.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        controller.didMove(toParentViewController: self)
+        if let lastController = children.last {
+            remove(asChildViewController: lastController)
+        }
+        addChild(controller)
+        containerView.addSubview(controller.view)
+        controller.view.frame = CGRect(x: 0, y: 0, width: screenWidth, height: UIHelper.shared.getDashboardContainerHeight(view))
+        //controller.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        controller.didMove(toParent: self)
     }
 }

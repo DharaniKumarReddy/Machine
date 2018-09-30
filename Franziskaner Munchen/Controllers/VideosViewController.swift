@@ -53,7 +53,7 @@ extension VideosViewController: UICollectionViewDataSource, UICollectionViewDele
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        let youtubePlayer = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: Constant.ViewControllerWithIdentifier.YoutubePlayerViewController) as! YoutubePlayerViewController
+        let youtubePlayer = UIStoryboard(name: Constant.StoryBoard.Main, bundle: Bundle.main).instantiateViewController(withIdentifier: String(describing: YoutubePlayerViewController.self)) as! YoutubePlayerViewController
         youtubePlayer.videoId = videos[indexPath.row].vId
         navigationController?.pushViewController(youtubePlayer, animated: true)
     }

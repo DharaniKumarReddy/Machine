@@ -13,19 +13,23 @@ class PDFViewController: UIViewController, WKNavigationDelegate {
 
     // MARK:- Variables
     internal var pdf: String?
+    private var webView: WKWebView!
     
     // MARK:- IBOutlets
-    @IBOutlet private weak var webview: WKWebView!
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let webConfiguration = WKWebViewConfiguration()
+        webView = WKWebView(frame: view.frame, configuration: webConfiguration)
+        webView.navigationDelegate = self
+        view.addSubview(webView)
         navigationItem.addTitleView()
         activityIndicator.startAnimating()
-        webview.navigationDelegate = self
+        //webView.navigationDelegate = self
         let request = URLRequest(url: URL(string: pdf ?? "")!)
-        webview.load(request)
+        webView.load(request)
         // Do any additional setup after loading the view.
     }
     

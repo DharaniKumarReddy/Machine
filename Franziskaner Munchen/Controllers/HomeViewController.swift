@@ -42,6 +42,10 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     // MARK:- Private Methods
     private func animateImageSlides(images: [UIImage]) {
         slidingImageView.animationImages = images

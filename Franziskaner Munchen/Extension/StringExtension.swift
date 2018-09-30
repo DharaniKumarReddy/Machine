@@ -14,7 +14,7 @@ extension String {
         URLSession.shared.dataTask(with: NSURL(string:self)! as URL) {
             (data, response, error) in
             if let data = data {
-                completion(UIImage(data: data) ?? UIImage())
+                completion(UIImage(data: data) ?? #imageLiteral(resourceName: "no_image"))
             } else {
                 completion(#imageLiteral(resourceName: "no_image"))
             }

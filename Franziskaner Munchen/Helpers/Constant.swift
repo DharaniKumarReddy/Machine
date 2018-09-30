@@ -9,24 +9,17 @@
 import Foundation
 
 struct Constant {
-    struct ViewControllerWithIdentifier {
-        static let HomeViewController           = "HomeViewController"
-        static let MenuViewController           = "MenuViewController"
-        static let NewsViewController           = "NewsViewController"
-        static let NotificationsViewController  = "NotificationsViewController"
-        static let WebViewController            = "WebViewController"
-        static let NewsDetailedViewController   = "NewsDetailedViewController"
-        static let YoutubePlayerViewController  = "YoutubePlayerViewController"
-    }
-    
-    struct TableViewCell {
-        static let NewsTableCell                = "NewsTableCell"
-        static let NotificationsTableCell       = "NotificationsTableCell"
-        static let ProjectTableCell             = "ProjectTableCell"
+    struct StoryBoard {
+        static let Main     = "Main"
     }
     
     struct CollectionViewCell {
         static let PhotosCollectionCell         = "PhotosCollectionCell"
         static let VideosCollectionCell         = "VideosCollectionCell"
+    }
+    
+    struct UserDefaults {
+        static let deviceToken                          = "device_token"
+        static let isPushNotificationAlertTriggered     = "PushNotificationAlertTriggered"
     }
 }
