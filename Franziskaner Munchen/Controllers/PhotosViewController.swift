@@ -46,9 +46,9 @@ extension PhotosViewController: UICollectionViewDataSource, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constant.CollectionViewCell.PhotosCollectionCell, for: indexPath) as! PhotosCollectionCell
-        cell.photoImageView.downloadImageFrom(link: photos[indexPath.row].img, contentMode: .scaleToFill)
-        return cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: PhotosCollectionCell.self), for: indexPath) as? PhotosCollectionCell
+        cell?.photoImageView.downloadImageFrom(link: photos[indexPath.row].img, contentMode: .scaleToFill)
+        return cell ?? UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

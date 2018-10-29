@@ -13,11 +13,6 @@ struct Constant {
         static let Main     = "Main"
     }
     
-    struct CollectionViewCell {
-        static let PhotosCollectionCell         = "PhotosCollectionCell"
-        static let VideosCollectionCell         = "VideosCollectionCell"
-    }
-    
     struct UserDefaults {
         static let deviceToken                          = "device_token"
         static let isPushNotificationAlertTriggered     = "PushNotificationAlertTriggered"

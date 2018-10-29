@@ -9,14 +9,19 @@
 import UIKit
 import UserNotifications
 import SlideMenuControllerSwift
+import Firebase
 
 typealias OnCompletion = ((Bool)->Void)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    internal var dashboard: DashboardViewController?
+    
     var window: UIWindow?
+    
     private let mainViewController = UIStoryboard(name: Constant.StoryBoard.Main, bundle: Bundle.main).instantiateInitialViewController() as! UINavigationController
+    
     private let menuViewController = UIStoryboard(name: Constant.StoryBoard.Main, bundle: Bundle.main).instantiateViewController(withIdentifier: String(describing: MenuViewController.self))
 
     private var didRecieveNotificationTime:Date!
@@ -35,7 +40,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             processNotification(remoteNotification as! [AnyHashable: Any] )
         }
         UINavigationBar.appearance().barStyle = UIBarStyle.blackOpaque
+        
         registerForPushNotifications()
+        FirebaseApp.configure()
+        Messaging.messaging().delegate = self
+        Messaging.messaging().subscribe(toTopic: "franziskaner")
         return true
     }
     
@@ -68,7 +77,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Persist the device token to further retrevial.
         UserDefaults.standard.set(deviceTokenString, forKey: Constant.UserDefaults.deviceToken)
         UserDefaults.standard.synchronize()
-        print("DEVICE TOKEN = \(deviceToken)")
+        Messaging.messaging().apnsToken = deviceToken as Data
+        print("DEVICE TOKEN = \(deviceTokenString)")
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
@@ -102,7 +112,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func handleNotification(userInfo: [AnyHashable: Any], onCompletion: @escaping OnCompletion) {
         print(userInfo)
-        PushNotificationHandler.sharedInstance.isControlByNotification = true
         if (userInfo["aps"] as? Dictionary<String, AnyObject>) != nil {
             didRecieveNotificationTime = Date()
             isNotificationFired = true
@@ -121,19 +130,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func processNotification(_ userInfo: [AnyHashable: Any]) {
         
-        if !PushNotificationHandler.sharedInstance.isNotificationReachedItsDestination {
+        guard PushNotificationHandler.sharedInstance.isNotificationReachedItsDestination else {
             return
         }
         
-//        if let info = userInfo["aps"] as? Dictionary<String, AnyObject> {
-//            for (key, value) in info {
-//                if key == "category" {
-//                    PushNotificationHandler.sharedInstance.notificationMessage = info["alert"] as! String
-//                    PushNotificationHandler.sharedInstance.typeOfNotification  = value as! String
-//                }
-//            }
-//        }
-        
+        PushNotificationHandler.sharedInstance.isPushNotificationRecieved = true
+        PushNotificationHandler.sharedInstance.isNotificationRecievedInForeground = UIApplication.shared.applicationState == .active
+        if let info = userInfo["aps"] as? Dictionary<String, AnyObject> {
+            for (key, value) in info {
+                if key == "alert" {
+                    PushNotificationHandler.sharedInstance.notificationMessage = info["alert"]?["title"] as? String ?? ""
+                    PushNotificationHandler.sharedInstance.notificationType = value as? Int ?? 0
+                }
+            }
+        }
+        if let type = userInfo["gcm.notification.type"] as? String {
+            PushNotificationHandler.sharedInstance.notificationType = Int(type) ?? 2
+        }
+        if let _ = dashboard {
+            dashboard?.postRemoteNotification()
+        }
     }
 }
 
+extension AppDelegate: UNUserNotificationCenterDelegate, MessagingDelegate {
+    
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+        print(fcmToken)
+    }
+    
+    func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingRemoteMessage) {
+        print(messaging)
+    }
+}

@@ -902,6 +902,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5R3-mR-Fwg"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="TNp-aC-AmD" id="jSA-Da-iDL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tx5-DG-HEc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -937,7 +940,7 @@
         <!--Project View Controller-->
         <scene sceneID="JIT-iz-FR2">
             <objects>
-                <viewController id="aOm-b9-2XG" customClass="ProjectViewController" customModule="Franziskaner_Munchen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProjectViewController" id="aOm-b9-2XG" customClass="ProjectViewController" customModule="Franziskaner_Munchen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R49-Qm-Icb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="714"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -20,6 +20,7 @@ class DashboardViewController: UIViewController {
     // MARK:- Variables
     private var currentIndex = 0
     private var tabs: [UIViewController] = []
+    private var isNotifiedAlertDismissed = true
     
     // MARK:- IBOutlets
     @IBOutlet private weak var containerView: UIView!
@@ -32,6 +33,7 @@ class DashboardViewController: UIViewController {
         navigationController?.isNavigationBarHidden = true
         navigationController?.navigationBar.tintColor = .white
         tabs = [loadHome(), loadNews(), loadNotifications(), loadWeb()]
+        (UIApplication.shared.delegate as? AppDelegate)?.dashboard = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -39,6 +41,7 @@ class DashboardViewController: UIViewController {
         navigationController?.isNavigationBarHidden = false
         containerView.isHidden = false
         tabBarView.isHidden = false
+        isNotificationYetToReachItsDestination()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -124,5 +127,118 @@ class DashboardViewController: UIViewController {
         controller.view.frame = CGRect(x: 0, y: 0, width: screenWidth, height: UIHelper.shared.getDashboardContainerHeight(view))
         //controller.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         controller.didMove(toParent: self)
+    }
+}
+
+extension DashboardViewController {
+    /**
+     Before notification going to invoke its controller, basic checks needs to be verified and notificaton will be fired.
+     */
+    internal func postRemoteNotification() {
+        
+        // Check Notification is recieved while app is foreground
+        if PushNotificationHandler.sharedInstance.isNotificationRecievedInForeground && isNotifiedAlertDismissed {
+            PushNotificationHandler.sharedInstance.isNotificationRecievedInForeground = false
+            self.isNotifiedAlertDismissed = false
+            // Pop's up the alertview and notifiy user to whether he/she wants to reach notified controller
+            guard TopViewController.isNotifiedController() else {
+                showAlertViewController(getAlertTitle(), message: truncateCharactersInNotificationMessage(PushNotificationHandler.sharedInstance.notificationMessage as NSString), cancelButton: "Close", destructiveButton: "", otherButtons: "Open", onDestroyAction: {
+                    self.isNotifiedAlertDismissed = true
+                    PushNotificationHandler.sharedInstance.isNotificationReachedItsDestination = true
+                    self.presentNotifiedViewController()
+                }, onCancelAction: {
+                    self.isNotifiedAlertDismissed = true
+                    // Making sure app is reached its destination view controller, so that future notifications will show
+                    PushNotificationHandler.sharedInstance.isNotificationReachedItsDestination = true
+                })
+                return
+            }
+            isNotifiedAlertDismissed = true
+            PushNotificationHandler.sharedInstance.isNotificationReachedItsDestination = true
+        } else if isNotifiedAlertDismissed {
+            
+            //Looks for destined notification controller
+            presentNotifiedViewController()
+        } else {
+            // Making sure app is reached its destination view controller, so that future notifications will show
+            PushNotificationHandler.sharedInstance.isNotificationReachedItsDestination = true
+        }
+    }
+    /**
+     To confirm whether notification reached its destined controller.
+     */
+    private func isNotificationYetToReachItsDestination() {
+        if PushNotificationHandler.sharedInstance.isPushNotificationRecieved {
+            postRemoteNotification()
+        }
+    }
+    
+    internal func presentNotifiedViewController() {
+        //8 Notification
+        //4 News
+        //5 magazines
+        //1 Mission from Dashboard
+        //3 Projektbispiele
+        //6 missionteam in menu
+        //2 Bolivian
+        
+        print(PushNotificationHandler.sharedInstance.notificationType)
+        PushNotificationHandler.sharedInstance.isPushNotificationRecieved = false
+        let type = PushNotificationHandler.sharedInstance.notificationType
+        if [8, 4].contains(type) {
+            loadTabBars(type)
+        } else {
+            switch type {
+            case 1, 2, 3:
+                navigateToController(type: type)
+            case 5:
+                openMagazines([])
+            case 6:
+                openWebPage(url: Route.missionsTeam.absoluteURL.absoluteString)
+            default:
+                break
+            }
+        }
+    }
+    
+    private func loadTabBars(_ type: Int) {
+        let index = [4:1, 8:2][type] ?? 0
+        animateIndicator(position: CGFloat(index) * screenWidth/4)
+        loadTabs(index: index)
+    }
+    
+    private func navigateToController(type: Int) {
+        guard let controller = UIStoryboard(name: Constant.StoryBoard.Main, bundle: Bundle.main).instantiateViewController(withIdentifier: String(describing: ProjectViewController.self)) as? ProjectViewController else { return }
+        //controller?.projectType
+        switch type {
+        case 1:
+            controller.projectType = .mission
+        case 2:
+            controller.projectType = .bolivien
+        default:
+            controller.projectType = .project
+        }
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    private func getAlertTitle() -> String {
+        switch PushNotificationHandler.sharedInstance.notificationType {
+        case 4:
+            return "News"
+        case 2:
+            return "Bolivian"
+        case 5:
+            return "Magazines"
+        case 8:
+            return "Notifications"
+        case 6:
+            return "Missions Team"
+        case 1:
+            return "Mission"
+        case 3:
+            return "Projektbispiele"
+        default:
+            return "Franziskaner"
+        }
     }
 }

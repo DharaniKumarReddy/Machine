@@ -14,12 +14,27 @@ class MagazinesViewController: UIViewController {
     internal var magazines: [Magazine] = []
     fileprivate var activityController : UIActivityViewController!
     
+    // MARK:- IBOutlets
+    @IBOutlet private weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationItem.addTitleView()
         self.magazines.sort{ $0.date.compare($1.date) == .orderedDescending }
+        getMagazines()
         // Do any additional setup after loading the view.
+    }
+    
+    private func getMagazines() {
+        guard magazines.count == 0 else { return }
+        APICaller.getInstance().getMagazines(onSuccess: { magazines in
+            self.magazines = magazines?.magazines ?? []
+            self.magazines.sort{ $0.date.compare($1.date) == .orderedDescending }
+            self.tableView.reloadData()
+        }, onError: { error in
+            
+        })
     }
     
     private func loadActivityController(pdf: String) {

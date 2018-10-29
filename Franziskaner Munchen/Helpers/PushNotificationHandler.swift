@@ -12,43 +12,15 @@ class PushNotificationHandler : NSObject {
     
     static let sharedInstance = PushNotificationHandler()
     
-    var isControlByNotification: Bool = false
+    var isNotificationRecievedInForeground: Bool = false
     
-    var isNotificationRecievedInForeground:Bool = false
+    var isLanchedByNotification: Bool = false
     
-    var isLanchedByNotification:Bool = false
+    var isPushNotificationRecieved: Bool = false
     
-    var typeOfNotification:String = ""
+    var notificationMessage: String = ""
     
-    var isPushNotificationRecieved:Bool = false
+    var notificationType: Int = 0
     
-    var notificationMessage:String = ""
-    
-    var goalTypeName:String = ""
-    
-    var customTypeName:String = ""
-    
-    var isNotificationReachedItsDestination:Bool = true
-    
-    var isGoalCreationInProgress:Bool = false
-    
-    var isMenuViewControllerVisible:Bool = false
-    
-    var isHealthAssessmentIsATopViewController:Bool = false
-    
-    var currentTopVCGoalName:String = ""
-    
-    var isNotificationWhilePinIsVisible:Bool = false
-    
-    var topViewController = ""
-    
-    var isDeeplinkInitiatedWhileUserLoggedOff:Bool = false
-    
-    var isDeeplinkInitiatedFromDEP:Bool = false
-    
-    var deepLinkApplicationSourceName:String = ""
-
-    var isViewControllerTriggeredByDashboardTileVC = false
-
-    var actorId:Int = 0
+    var isNotificationReachedItsDestination: Bool = true
 }

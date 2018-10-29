@@ -9,6 +9,9 @@ def list_of_library
     pod 'SlideMenuControllerSwift', :git => 'https://github.com/dekatotoro/SlideMenuControllerSwift', :branch => 'swift4'
     pod 'SwiftyJSON'
     pod 'YouTubePlayer'
+    pod 'Firebase/Core'
+    pod 'Firebase/Messaging'
+
     # even more pods...
 end
 

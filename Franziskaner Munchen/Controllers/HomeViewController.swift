@@ -119,9 +119,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction private func magazineButton_Tapped() {
-        let magazineController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "MagazinesViewController") as! MagazinesViewController
-        magazineController.magazines = self.magazines
-        navigationController?.pushViewController(magazineController, animated: true)
+        openMagazines(self.magazines)
     }
     
     @IBAction private func socialButton_Tapped() {

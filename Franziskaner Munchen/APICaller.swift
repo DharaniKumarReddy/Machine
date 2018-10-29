@@ -9,6 +9,8 @@
 import Foundation
 
 typealias OnSuccessResponse = (String) -> Void
+typealias OnDestroySuccess = () -> Void
+typealias OnCancelSuccess = () -> Void
 typealias OnErrorMessage = (String) -> Void
 
 typealias JSONDictionary = [String : AnyObject]

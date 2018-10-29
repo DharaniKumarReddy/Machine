@@ -46,9 +46,9 @@ extension VideosViewController: UICollectionViewDataSource, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constant.CollectionViewCell.VideosCollectionCell, for: indexPath) as! VideosCollectionCell
-        cell.loadData(video: videos[indexPath.row])
-        return cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: VideosCollectionCell.self), for: indexPath) as? VideosCollectionCell
+        cell?.loadData(video: videos[indexPath.row])
+        return cell ?? UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

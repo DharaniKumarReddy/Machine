@@ -11,6 +11,7 @@
 		9A68B146879B9D2877FF6F13 /* Pods_Franziskaner_MunchenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F28CFFFF8144025A31F081DB /* Pods_Franziskaner_MunchenUITests.framework */; };
 		9F005B1E215C91290024CDBA /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F005B1D215C91290024CDBA /* UIHelper.swift */; };
 		9F126F4A208E5B9400A82742 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F126F49208E5B9400A82742 /* PDFViewController.swift */; };
+		9F1DB88C21785F6E00ADA0DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F1DB88B21785F6E00ADA0DA /* GoogleService-Info.plist */; };
 		9F363D6B8B7F6E89357E5693 /* Pods_Franziskaner_MunchenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA124D27A91A41001235817 /* Pods_Franziskaner_MunchenTests.framework */; };
 		9F4B096A2084FF57006C7CDE /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B09692084FF57006C7CDE /* APICaller.swift */; };
 		9F5FBF2D208E37DE000D8529 /* MagazinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5FBF2C208E37DE000D8529 /* MagazinesViewController.swift */; };
@@ -40,6 +41,8 @@
 		9FC7D3BE2081036D00F26BC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC7D3BC2081036C00F26BC5 /* LaunchScreen.storyboard */; };
 		9FC7D3BF2081036D00F26BC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC7D3BC2081036C00F26BC5 /* LaunchScreen.storyboard */; };
 		9FC7D3C02081036D00F26BC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC7D3BC2081036C00F26BC5 /* LaunchScreen.storyboard */; };
+		9FF2145B2160E4F600676D15 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF2145A2160E4F600676D15 /* UIApplicationExtension.swift */; };
+		9FF2145D2160E8E300676D15 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF2145C2160E8E300676D15 /* TopViewController.swift */; };
 		9FFC4C93208081F000563094 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFC4C92208081F000563094 /* AppDelegate.swift */; };
 		9FFC4C98208081F000563094 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FFC4C96208081F000563094 /* Main.storyboard */; };
 		9FFC4C9A208081F200563094 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FFC4C99208081F200563094 /* Assets.xcassets */; };
@@ -70,6 +73,7 @@
 		85059D27D49008D21D7B401C /* Pods-Franziskaner Munchen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Franziskaner Munchen.release.xcconfig"; path = "Pods/Target Support Files/Pods-Franziskaner Munchen/Pods-Franziskaner Munchen.release.xcconfig"; sourceTree = "<group>"; };
 		9F005B1D215C91290024CDBA /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		9F126F49208E5B9400A82742 /* PDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
+		9F1DB88B21785F6E00ADA0DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9F4B09692084FF57006C7CDE /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		9F5D1D21215BD6D9004FBC43 /* Franziskaner Munchen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Franziskaner Munchen.entitlements"; sourceTree = "<group>"; };
 		9F5FBF2C208E37DE000D8529 /* MagazinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazinesViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +101,8 @@
 		9F9D39C5208B2C7C0066935E /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		9FAD8E65215DE9B7006C0F78 /* PushNotificationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationHandler.swift; sourceTree = "<group>"; };
 		9FC7D3BD2081036C00F26BC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9FF2145A2160E4F600676D15 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
+		9FF2145C2160E8E300676D15 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		9FFC4C8F208081F000563094 /* Franziskaner Munchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Franziskaner Munchen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FFC4C92208081F000563094 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FFC4C97208081F000563094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -156,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				9F7CF1BD208D7D4600548851 /* CAGradientLayerExtension.swift */,
+				9FF2145A2160E4F600676D15 /* UIApplicationExtension.swift */,
 				9F7CF1BA208D7D4600548851 /* DateFormatterExtension.swift */,
 				9F7CF1BF208D7D4600548851 /* StringExtension.swift */,
 				9F7CF1BE208D7D4600548851 /* UIImageViewExtension.swift */,
@@ -173,6 +180,7 @@
 				9FAD8E65215DE9B7006C0F78 /* PushNotificationHandler.swift */,
 				9F9D39C4208B2C7C0066935E /* Route.swift */,
 				9F005B1D215C91290024CDBA /* UIHelper.swift */,
+				9FF2145C2160E8E300676D15 /* TopViewController.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -242,6 +250,7 @@
 				9FFC4C99208081F200563094 /* Assets.xcassets */,
 				9FC7D3BC2081036C00F26BC5 /* LaunchScreen.storyboard */,
 				9FFC4C9E208081F200563094 /* Info.plist */,
+				9F1DB88B21785F6E00ADA0DA /* GoogleService-Info.plist */,
 			);
 			path = "Franziskaner Munchen";
 			sourceTree = "<group>";
@@ -353,6 +362,9 @@
 						CreatedOnToolsVersion = 9.3;
 						LastSwiftMigration = 1000;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -396,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FC7D3BE2081036D00F26BC5 /* LaunchScreen.storyboard in Resources */,
+				9F1DB88C21785F6E00ADA0DA /* GoogleService-Info.plist in Resources */,
 				9FFC4C9A208081F200563094 /* Assets.xcassets in Resources */,
 				9FFC4C98208081F000563094 /* Main.storyboard in Resources */,
 			);
@@ -463,15 +476,21 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Franziskaner MunchenTests/Pods-Franziskaner MunchenTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/YouTubePlayer/YouTubePlayer.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YouTubePlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -485,15 +504,21 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Franziskaner Munchen/Pods-Franziskaner Munchen-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/YouTubePlayer/YouTubePlayer.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YouTubePlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -507,15 +532,21 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Franziskaner MunchenUITests/Pods-Franziskaner MunchenUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/YouTubePlayer/YouTubePlayer.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YouTubePlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -562,6 +593,7 @@
 				9F7CF1C6208D7D4600548851 /* UIViewControllerExtension.swift in Sources */,
 				9F9D39A2208B2C350066935E /* MyWebViewController.swift in Sources */,
 				9F9D39BD208B2C350066935E /* NewsViewController.swift in Sources */,
+				9FF2145B2160E4F600676D15 /* UIApplicationExtension.swift in Sources */,
 				9F7CF1CC208D7D4600548851 /* UIImageViewExtension.swift in Sources */,
 				9F9D39A8208B2C350066935E /* DashboardViewController.swift in Sources */,
 				9F7CF1C3208D7D4600548851 /* UINavigationControllerExtension.swift in Sources */,
@@ -570,6 +602,7 @@
 				9F9D3995208B2C2A0066935E /* Parser.swift in Sources */,
 				9F9D39C9208B2C7C0066935E /* Constant.swift in Sources */,
 				9F9D39B7208B2C350066935E /* VideosViewController.swift in Sources */,
+				9FF2145D2160E8E300676D15 /* TopViewController.swift in Sources */,
 				9F5FBF2D208E37DE000D8529 /* MagazinesViewController.swift in Sources */,
 				9F9D39AB208B2C350066935E /* NewsDetailedViewController.swift in Sources */,
 				9FAD8E66215DE9B7006C0F78 /* PushNotificationHandler.swift in Sources */,
@@ -758,7 +791,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.integro.franziskanermunchen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = Machine;
+				PROVISIONING_PROFILE_SPECIFIER = FranziskanerMachine;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -781,7 +814,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.integro.franziskanermunchen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = Machine;
+				PROVISIONING_PROFILE_SPECIFIER = FranziskanerMachine;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
